@@ -1,0 +1,1 @@
+constexpr int SOME   = 1;
