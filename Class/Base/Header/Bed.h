@@ -1,4 +1,5 @@
 #pragma once
+
 class Bed
 {
     int numb_row;

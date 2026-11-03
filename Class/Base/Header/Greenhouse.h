@@ -4,6 +4,7 @@
 #include"Class/Base/Header/Equipment.h"
 #include"Class/Base/Header/Plant.h"
 #include"Class/Base/Header/Bed.h"
+
 class Greehouse
 {
     private:
