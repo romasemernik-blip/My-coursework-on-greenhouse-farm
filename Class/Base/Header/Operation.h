@@ -2,5 +2,6 @@
 
 class Operation
 {
+    double energy_cost;
 
 };
