@@ -4,15 +4,20 @@
 #include"Class/Base/Header/Equipment.h"
 #include"Class/Base/Header/Plant.h"
 #include"Class/Base/Header/Bed.h"
+#include"Class/Template/Collection.h"
 
 class Greehouse
 {
     private:
     std::string name;
     int number_of_beds;
-    std::vector<std::unique_ptr<Equipment>> equipment;
+    Collection<std::unique_ptr<Equipment>> equipment;
     int energy;
-    std::vector<std::unique_ptr<Bed>> beds;
+    Collection<std::unique_ptr<Bed>> beds;
+    size_t length;
+    size_t width;
+    size_t height;
+
     public:
 
 };
