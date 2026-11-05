@@ -1,4 +1,6 @@
 #pragma once
+#include <vector>
+#include"Class/Base/Header/Growth_stage.h"
 
 class Plant
 {
@@ -6,5 +8,7 @@ class Plant
     double height;
     double water_requirement;
     double current_health;
+    std::unique_ptr<Growth_stage> stage;
+    
 
 };
