@@ -51,10 +51,14 @@ public:
     double             get_current_energy() const noexcept;
     std::size_t        get_bed_count()     const noexcept;
     std::size_t        get_equipment_count() const noexcept;
+    
     Bed*               get_bed(std::size_t index);
     const Bed*         get_bed(std::size_t index) const;
     Equipment*         get_equipment(std::size_t index);
     const Equipment*   get_equipment(std::size_t index) const;
+
+    const Collection<std::unique_ptr<Bed>>& get_beds() const noexcept;
+    const Collection<std::unique_ptr<Equipment>>& get_equipment_collection() const noexcept;
 
     void set_name(const std::string& value);
     void set_length(double value);

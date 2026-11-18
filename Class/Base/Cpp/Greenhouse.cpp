@@ -133,6 +133,14 @@ const Equipment* Greenhouse::get_equipment(std::size_t index) const {
     return equipment_[index].get();
 }
 
+const Collection<std::unique_ptr<Bed>>& Greenhouse::get_beds() const noexcept {
+    return beds_;
+}
+
+const Collection<std::unique_ptr<Equipment>>& Greenhouse::get_equipment_collection() const noexcept {
+    return equipment_;
+}
+
 void Greenhouse::set_name(const std::string& value) {
     if (value.empty())
         throw Invalid_argument_exception("name", "must not be empty");
