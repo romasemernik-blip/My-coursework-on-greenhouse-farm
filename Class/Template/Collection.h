@@ -1,73 +1,119 @@
 #pragma once
 #include <vector>
-#include <iostream>
+#include <algorithm>
+#include <functional>
+#include <cstddef>
+#include <utility>
+#include "Class/Exception/Header/All_exception.h"
 
 template <typename T>
 class Collection {
-    private:
-    std::vector<T> items;
+private:
+    std::vector<T> items_;
 
-    public:
+public:
     using iterator = typename std::vector<T>::iterator;
     using const_iterator = typename std::vector<T>::const_iterator;
 
-    const_iterator begin() {
-        return items.begin();
-    }
-    const_iterator end() {
-        return items.end();
+    Collection() = default;
+    Collection(const Collection& other) = default;
+    Collection(Collection&& other) noexcept = default;
+    Collection& operator=(const Collection& other) = default;
+    Collection& operator=(Collection&& other) noexcept = default;
+    ~Collection() = default;
+
+    iterator begin() { return items_.begin(); }
+    iterator end()   { return items_.end(); }
+    const_iterator begin() const { return items_.begin(); }
+    const_iterator end()   const { return items_.end(); }
+
+    T& operator[](std::size_t index) {
+        if (index >= items_.size())
+            throw Invalid_argument_exception("index", "out of range in Collection::operator[]");
+        return items_[index];
     }
 
-    iterator begin() {
-        return items.begin();
-    }
-    iterator end() {
-        return items.end();
+    const T& operator[](std::size_t index) const {
+        if (index >= items_.size())
+            throw Invalid_argument_exception("index", "out of range in Collection::operator[] const");
+        return items_[index];
     }
 
-    T& operator[] (size_t index) { 
-        return items[index];
+    T& get(std::size_t index) {
+        if (index >= items_.size())
+            throw Invalid_argument_exception("index", "out of range in Collection::get");
+        return items_[index];
     }
-    const T& operator[] (size_t index) const { 
-        return items[index];
+
+    const T& get(std::size_t index) const {
+        if (index >= items_.size())
+            throw Invalid_argument_exception("index", "out of range in Collection::get const");
+        return items_[index];
     }
 
     void push_back(const T& item) {
-        items.push_back(item);
-    }
-     void push_back(T&& item) {
-        items.push_back(std::move(item));
+        items_.push_back(item);
     }
 
-    bool empty() const {
-        return items.empty();
+    void push_back(T&& item) {
+        items_.push_back(std::move(item));
     }
 
-    bool remove_at(size_t index) {
-        if (index >=items.size()) return false;
-        items.erase(items.begin() + index);
-        return true;
-    }
-    
-    T& get(size_t index) {
-        return items[index];
-    }
-    const T& get(size_t index) const {
-        return items[index];
+    bool empty() const noexcept {
+        return items_.empty();
     }
 
-    int find( const T& item) const {
-        for (size_t i = 0; i < items.size(); i++) {
-            if (items[i] == item) return static_cast<int>(i);
+    std::size_t size() const noexcept {
+        return items_.size();
+    }
+
+    void clear() noexcept {
+        items_.clear();
+    }
+
+    void remove_at(std::size_t index) {
+        if (index >= items_.size())
+            throw Invalid_argument_exception("index", "out of range in Collection::remove_at");
+        items_.erase(items_.begin() + index);
+    }
+
+    template <typename Pred>
+    int find_if(Pred pred) const {
+        for (std::size_t i = 0; i < items_.size(); ++i) {
+            if (pred(items_[i])) return static_cast<int>(i);
         }
         return -1;
     }
 
-    size_t size() const {
-        return items.size();
+    template <typename Pred>
+    Collection<T*> filter(Pred pred) {
+        Collection<T*> result;
+        for (auto& item : items_) {
+            if (pred(item)) result.push_back(&item);
+        }
+        return result;
     }
-    void clear() {
-        items.clear();
+
+    template <typename Pred>
+    Collection<const T*> filter(Pred pred) const {
+        Collection<const T*> result;
+        for (const auto& item : items_) {
+            if (pred(item)) result.push_back(&item);
+        }
+        return result;
     }
-    
+
+    template <typename Key>
+    void sort_by(Key key) {
+        std::sort(items_.begin(), items_.end(),
+                  [&](const T& a, const T& b) { return key(a) < key(b); });
+    }
+
+    template <typename Init, typename BinOp>
+    Init accumulate(Init init, BinOp op) const {
+        for (const auto& item : items_) {
+            init = op(init, item);
+        }
+        return init;
+    }
 };
