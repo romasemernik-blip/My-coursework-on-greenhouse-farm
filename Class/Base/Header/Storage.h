@@ -27,4 +27,5 @@ public:
     double get_free_space()   const noexcept;
 
     void set_capacity(double value);
+    const std::map<std::string, double>& get_contents() const noexcept { return contents_; }
 };
