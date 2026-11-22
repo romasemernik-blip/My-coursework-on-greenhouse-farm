@@ -1,0 +1,182 @@
+[
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/GreenhouseSimulator_autogen/mocs_compilation.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/GreenhouseSimulator_autogen/mocs_compilation.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/GreenhouseSimulator_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/GreenhouseSimulator_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/main.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/main.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/main.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Bed.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Bed.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Bed.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Bed.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Equipment.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Equipment.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Equipment.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Equipment.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Greenhouse.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Greenhouse.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Greenhouse.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Greenhouse.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Human.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Human.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Human.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Human.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Operation.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Operation.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Operation.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Operation.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Plant.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Plant.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Plant.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Plant.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Schedule.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Schedule.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Schedule.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Schedule.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Storage.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Storage.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Storage.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Storage.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Equipment/Cpp/Permanent_Equipment.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Equipment/Cpp/Permanent_Equipment.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Equipment/Cpp/Permanent_Equipment.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Equipment/Cpp/Permanent_Equipment.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Equipment/Cpp/Single_use_Equipment.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Equipment/Cpp/Single_use_Equipment.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Equipment/Cpp/Single_use_Equipment.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Equipment/Cpp/Single_use_Equipment.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Human/Cpp/Agronomist.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Human/Cpp/Agronomist.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Human/Cpp/Agronomist.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Human/Cpp/Agronomist.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Human/Cpp/Operator.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Human/Cpp/Operator.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Human/Cpp/Operator.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Human/Cpp/Operator.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Inheritor2/Permanent_Equipment/Cpp/Lighting.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Inheritor2/Permanent_Equipment/Cpp/Lighting.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Inheritor2/Permanent_Equipment/Cpp/Lighting.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Inheritor2/Permanent_Equipment/Cpp/Lighting.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Inheritor2/Permanent_Equipment/Cpp/Sensor.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Inheritor2/Permanent_Equipment/Cpp/Sensor.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Inheritor2/Permanent_Equipment/Cpp/Sensor.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Inheritor2/Permanent_Equipment/Cpp/Sensor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Inheritor2/Single_use_Equipment/Cpp/Fertilizer_Equipment.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Inheritor2/Single_use_Equipment/Cpp/Fertilizer_Equipment.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Inheritor2/Single_use_Equipment/Cpp/Fertilizer_Equipment.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Inheritor2/Single_use_Equipment/Cpp/Fertilizer_Equipment.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Inheritor2/Single_use_Equipment/Cpp/Watering_Equipment.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Inheritor2/Single_use_Equipment/Cpp/Watering_Equipment.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Inheritor2/Single_use_Equipment/Cpp/Watering_Equipment.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Inheritor2/Single_use_Equipment/Cpp/Watering_Equipment.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Operation/Cpp/Auto_Operation.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Operation/Cpp/Auto_Operation.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Operation/Cpp/Auto_Operation.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Operation/Cpp/Auto_Operation.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Operation/Cpp/Collect.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Operation/Cpp/Collect.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Operation/Cpp/Collect.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Operation/Cpp/Collect.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Operation/Cpp/Planting_crop.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Operation/Cpp/Planting_crop.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Operation/Cpp/Planting_crop.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Operation/Cpp/Planting_crop.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/File_manager.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/File_manager.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/File_manager.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/File_manager.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Human_loader.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Human_loader.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Human_loader.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Human_loader.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Plant_type_data.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Plant_type_data.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Plant_type_data.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Plant_type_data.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Plant_type_loader.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Plant_type_loader.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Plant_type_loader.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Plant_type_loader.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Progress_saver.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Progress_saver.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Progress_saver.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Progress_saver.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Storage_loader.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Storage_loader.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Storage_loader.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Storage_loader.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/Input_manager/Cpp/Input_reader.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/Input_manager/Cpp/Input_reader.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/Time_manager/Cpp/Time_manager.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/Time_manager/Cpp/Time_manager.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Cpp/MainWindow.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Cpp/MainWindow.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj"
+}
+]
