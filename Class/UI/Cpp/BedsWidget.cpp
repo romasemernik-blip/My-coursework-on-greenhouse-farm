@@ -4,7 +4,7 @@
 #include <cmath>
 
 BedsWidget::BedsWidget(QWidget *parent) : QWidget(parent) {
-    QVBoxLayout* main_layout = new QVBoxLayout(this);
+    auto* main_layout = new QVBoxLayout(this); // auto*
 
     info_label_ = new QLabel("Выберите грядку", this);
     info_label_->setStyleSheet("font-weight: bold; font-size: 14px; margin-bottom: 5px;");
@@ -15,19 +15,17 @@ BedsWidget::BedsWidget(QWidget *parent) : QWidget(parent) {
     grid_widget_->setStyleSheet("background-color: #f0f0f0; border: 1px solid #ccc;");
     main_layout->addWidget(grid_widget_);
 
-    QHBoxLayout* action_layout = new QHBoxLayout();
+    auto* action_layout = new QHBoxLayout(); // auto*
     
-    // Создаем все кнопки
-    QPushButton* btn_add = new QPushButton("Добавить", this);
-    QPushButton* btn_remove = new QPushButton("Удалить", this);
-    QPushButton* btn_plant = new QPushButton("Посадить", this);
-    QPushButton* btn_collect = new QPushButton("Собрать", this);
-    QPushButton* btn_water = new QPushButton("Полить", this);
-    QPushButton* btn_fert = new QPushButton("Удобрить", this);
-    QPushButton* btn_light = new QPushButton("Свет (грядка)", this);
-    QPushButton* btn_remove_dead = new QPushButton("Убрать мертвые", this);
+    auto* btn_add = new QPushButton("Добавить", this); // auto*
+    auto* btn_remove = new QPushButton("Удалить", this);
+    auto* btn_plant = new QPushButton("Посадить", this);
+    auto* btn_collect = new QPushButton("Собрать", this);
+    auto* btn_water = new QPushButton("Полить", this);
+    auto* btn_fert = new QPushButton("Удобрить", this);
+    auto* btn_light = new QPushButton("Свет (грядка)", this);
+    auto* btn_remove_dead = new QPushButton("Убрать мертвые", this);
 
-    // Подключаем сигналы
     connect(btn_add, &QPushButton::clicked, this, &BedsWidget::add_bed_clicked);
     connect(btn_remove, &QPushButton::clicked, this, &BedsWidget::remove_bed_clicked);
     connect(btn_plant, &QPushButton::clicked, this, &BedsWidget::plant_clicked);
@@ -37,7 +35,6 @@ BedsWidget::BedsWidget(QWidget *parent) : QWidget(parent) {
     connect(btn_light, &QPushButton::clicked, this, &BedsWidget::toggle_light_clicked);
     connect(btn_remove_dead, &QPushButton::clicked, this, &BedsWidget::remove_dead_clicked);
 
-    // Добавляем в layout
     action_layout->addWidget(btn_add);
     action_layout->addWidget(btn_remove);
     action_layout->addWidget(btn_plant);
@@ -45,7 +42,7 @@ BedsWidget::BedsWidget(QWidget *parent) : QWidget(parent) {
     action_layout->addWidget(btn_water);
     action_layout->addWidget(btn_fert);
     action_layout->addWidget(btn_light);
-    action_layout->addWidget(btn_remove_dead); // Кнопка на месте
+    action_layout->addWidget(btn_remove_dead);
     
     main_layout->addLayout(action_layout);
 }
@@ -53,11 +50,13 @@ BedsWidget::BedsWidget(QWidget *parent) : QWidget(parent) {
 void BedsWidget::clear() {
     QLayoutItem* child;
     while ((child = grid_layout_->takeAt(0)) != nullptr) {
-        delete child->widget(); delete child;
+        delete child->widget(); 
+        delete child;
     }
 }
 
 void BedsWidget::set_bed(Bed* bed, bool is_light_on, double current_time_hours) {
+    Q_UNUSED(current_time_hours); 
     clear();
     if (!bed) {
         info_label_->setText("Выберите грядку.");
@@ -69,8 +68,8 @@ void BedsWidget::set_bed(Bed* bed, bool is_light_on, double current_time_hours) 
 
     int row = 0, col = 0;
     for (std::size_t i = 0; i < bed->get_plant_count(); ++i) {
-        Plant* p = bed->get_plant(i);
-        QLabel* label = new QLabel(this);
+        const Plant* p = bed->get_plant(i); 
+        auto* label = new QLabel(this);
         label->setFixedSize(40, 40);
         
         QString tooltip = QString("Тип: %1\nЗдоровье: %2%\nСтадия: %3")

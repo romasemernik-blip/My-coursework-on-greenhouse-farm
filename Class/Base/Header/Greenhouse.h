@@ -63,5 +63,5 @@ public:
     void set_height(double value);
     void set_max_energy(double value);
     void set_current_energy(double value);
-    void update(double dt, bool global_light_on);
+    void update(double dt, bool global_light_on) const;
 };

@@ -53,7 +53,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
 MainWindow::~MainWindow() {
     if (sys_log_) sys_log_->log("=== ЗАВЕРШЕНИЕ ПРОГРАММЫ ===");
-    // delete game_timer_; <-- УДАЛЕНО (Qt сам очистит память)
 }
 
 void MainWindow::closeEvent(QCloseEvent *event) {
@@ -62,10 +61,9 @@ void MainWindow::closeEvent(QCloseEvent *event) {
 }
 
 void MainWindow::setup_ui() {
-    QSplitter* main_splitter = new QSplitter(Qt::Horizontal, this);
-
-    QWidget* left_panel = new QWidget(this);
-    QVBoxLayout* left_layout = new QVBoxLayout(left_panel);
+    auto* main_splitter = new QSplitter(Qt::Horizontal, this);
+    auto* left_panel = new QWidget(this);
+    auto* left_layout = new QVBoxLayout(left_panel);
 
     auto* btn_load_all = new QPushButton("Загрузить все данные", this);
     auto* btn_save_all = new QPushButton("Сохранить все данные", this);
@@ -145,7 +143,7 @@ void MainWindow::setup_ui() {
     bottom_panel_ = new BottomPanelWidget(this);
     connect(bottom_panel_, &BottomPanelWidget::speed_changed, this, &MainWindow::on_speed_changed);
 
-    QSplitter* right_splitter = new QSplitter(Qt::Vertical, this);
+    auto* right_splitter = new QSplitter(Qt::Vertical, this);
     right_splitter->addWidget(tab_widget_);
     right_splitter->addWidget(bottom_panel_);
     main_splitter->addWidget(left_panel);
@@ -580,9 +578,9 @@ void MainWindow::refresh_storage_view() {
     storage_list_widget_->clear();
     storage_capacity_label_->setText(QString("Склад: %1 / %2 кг")
         .arg(storage_.get_current_load()).arg(storage_.get_capacity()));
-    for (const auto& pair : storage_.get_contents()) {
+    for (const auto& [crop, amount] : storage_.get_contents()) { // structured binding
         storage_list_widget_->addItem(QString("%1: %2 кг")
-            .arg(QString::fromStdString(pair.first)).arg(pair.second));
+            .arg(QString::fromStdString(crop)).arg(amount));
     }
 }
 

@@ -10,14 +10,15 @@ std::vector<Plant_type_data> Plant_type_loader::load(const std::string& path) {
     std::string line;
     std::size_t line_num = 0;
     
-    std::string name=""; double temp=0, hum=0, water=0, speed=0;
+    std::string name; 
+    double temp = 0, hum = 0, water = 0, speed = 0;
 
     while (std::getline(file, line)) {
         line_num++;
         if (line.empty() || line[0] == '#') continue;
 
         if (line == "[TYPE]") {
-            name=""; temp=0; hum=0; water=0; speed=0;
+            name = ""; temp = 0; hum = 0; water = 0; speed = 0;
         } else if (line == "[/TYPE]") {
             try {
                 result.emplace_back(name, temp, hum, water, speed);
@@ -27,7 +28,8 @@ std::vector<Plant_type_data> Plant_type_loader::load(const std::string& path) {
         } else {
             auto pos = line.find('=');
             if (pos == std::string::npos) continue;
-            std::string key = line.substr(0, pos), val = line.substr(pos + 1);
+            auto key = line.substr(0, pos);
+            auto val = line.substr(pos + 1);
 
             try {
                 if (key == "name") name = val;

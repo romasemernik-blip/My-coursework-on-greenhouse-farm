@@ -15,7 +15,7 @@ public:
     using iterator = typename std::vector<T>::iterator;
     using const_iterator = typename std::vector<T>::const_iterator;
 
-    Collection() {};
+    Collection() = default; 
     Collection(const Collection& other) = default;
     Collection(Collection&& other) noexcept = default;
     Collection& operator=(const Collection& other) = default;
@@ -28,52 +28,33 @@ public:
     const_iterator end()   const { return items_.end(); }
 
     T& operator[](std::size_t index) {
-        if (index >= items_.size())
-            throw Invalid_argument_exception("index", "out of range in Collection::operator[]");
+        if (index >= items_.size()) throw Invalid_argument_exception("index", "out of range");
         return items_[index];
     }
 
     const T& operator[](std::size_t index) const {
-        if (index >= items_.size())
-            throw Invalid_argument_exception("index", "out of range in Collection::operator[] const");
+        if (index >= items_.size()) throw Invalid_argument_exception("index", "out of range");
         return items_[index];
     }
 
     T& get(std::size_t index) {
-        if (index >= items_.size())
-            throw Invalid_argument_exception("index", "out of range in Collection::get");
+        if (index >= items_.size()) throw Invalid_argument_exception("index", "out of range");
         return items_[index];
     }
 
     const T& get(std::size_t index) const {
-        if (index >= items_.size())
-            throw Invalid_argument_exception("index", "out of range in Collection::get const");
+        if (index >= items_.size()) throw Invalid_argument_exception("index", "out of range");
         return items_[index];
     }
 
-    void push_back(const T& item) {
-        items_.push_back(item);
-    }
-
-    void push_back(T&& item) {
-        items_.push_back(std::move(item));
-    }
-
-    bool empty() const noexcept {
-        return items_.empty();
-    }
-
-    std::size_t size() const noexcept {
-        return items_.size();
-    }
-
-    void clear() noexcept {
-        items_.clear();
-    }
+    void push_back(const T& item) { items_.push_back(item); }
+    void push_back(T&& item) { items_.push_back(std::move(item)); }
+    bool empty() const noexcept { return items_.empty(); }
+    std::size_t size() const noexcept { return items_.size(); }
+    void clear() noexcept { items_.clear(); }
 
     void remove_at(std::size_t index) {
-        if (index >= items_.size())
-            throw Invalid_argument_exception("index", "out of range in Collection::remove_at");
+        if (index >= items_.size()) throw Invalid_argument_exception("index", "out of range");
         items_.erase(items_.begin() + index);
     }
 

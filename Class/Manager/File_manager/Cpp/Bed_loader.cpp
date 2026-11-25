@@ -1,14 +1,20 @@
 #include "Class/Manager/File_manager/Header/Bed_loader.h"
 #include "Class/Exception/Header/All_exception.h"
 #include <fstream>
-#include <sstream>
+
+namespace {
+    void trim(std::string& s) {
+        s.erase(0, s.find_first_not_of(" \t\r\n"));
+        s.erase(s.find_last_not_of(" \t\r\n") + 1);
+    }
+}
 
 void Bed_loader::save(const std::string& path, const Collection<std::unique_ptr<Bed>>& beds) {
     std::ofstream file(path);
     if (!file.is_open()) throw File_open_exception(path, "writing");
 
-    for (std::size_t i = 0; i < beds.size(); ++i) {
-        const Bed* b = beds[i].get();
+    for (const auto& b_ptr : beds) {
+        const Bed* b = b_ptr.get();
         file << "[BED]\n";
         file << "row=" << b->get_numb_row() << "\n";
         file << "crop_row=" << b->get_numb_crop_row() << "\n";
@@ -45,29 +51,24 @@ Collection<std::unique_ptr<Bed>> Bed_loader::load(const std::string& path) {
     std::string line;
     std::size_t line_num = 0;
 
-    std::unique_ptr<Bed> current_bed = nullptr;
+    std::unique_ptr<Bed> current_bed;
     
-    // Временные переменные для растения
-    std::string p_id = "id", p_type = "type";
+    std::string p_id, p_type;
     double p_h = 1, p_w = 1, p_t = 20, p_hu = 50, p_sp = 0, p_sd = 100;
     int p_st = 0;
-
-    auto trim = [](std::string& s) {
-        s.erase(0, s.find_first_not_of(" \t\r\n"));
-        s.erase(s.find_last_not_of(" \t\r\n") + 1);
-    };
 
     while (std::getline(file, line)) {
         line_num++;
         trim(line);
         if (line.empty() || line[0] == '#') continue;
 
-        if (line == "[BED]") current_bed = std::make_unique<Bed>();
-        else if (line == "[/BED]") { if (current_bed) result.push_back(std::move(current_bed)); }
-        else if (line == "[PLANT]") { 
+        if (line == "[BED]") {
+            current_bed = std::make_unique<Bed>();
+        } else if (line == "[/BED]") {
+            if (current_bed) result.push_back(std::move(current_bed));
+        } else if (line == "[PLANT]") { 
             p_id = "id"; p_type = "type"; p_h = 1; p_w = 1; p_t = 20; p_hu = 50; p_sp = 0; p_sd = 100; p_st = 0; 
-        }
-        else if (line == "[/PLANT]") {
+        } else if (line == "[/PLANT]") {
             if (current_bed) {
                 auto plant = std::make_unique<Plant>(p_id, p_type, p_h, p_w, p_t, p_hu);
                 plant->set_stage(static_cast<Growth_stage>(p_st));
@@ -79,18 +80,17 @@ Collection<std::unique_ptr<Bed>> Bed_loader::load(const std::string& path) {
         } else {
             auto pos = line.find('=');
             if (pos == std::string::npos) continue;
-            std::string key = line.substr(0, pos), val = line.substr(pos + 1);
+            auto key = line.substr(0, pos);
+            auto val = line.substr(pos + 1);
 
             try {
                 if (current_bed) {
-                    // Поля грядки
                     if (key == "row") current_bed->set_numb_row(std::stoi(val));
                     else if (key == "crop_row") current_bed->set_numb_crop_row(std::stoi(val));
                     else if (key == "length") current_bed->set_length(std::stod(val));
                     else if (key == "width") current_bed->set_width(std::stod(val));
                     else if (key == "ph") current_bed->set_soil_ph(std::stod(val));
                     else if (key == "moisture") current_bed->set_moisture(std::stod(val));
-                    // Поля растения
                     else if (key == "id") p_id = val;
                     else if (key == "type") p_type = val;
                     else if (key == "height") p_h = std::stod(val);

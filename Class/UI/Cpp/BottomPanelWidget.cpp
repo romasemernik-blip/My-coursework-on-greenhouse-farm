@@ -3,8 +3,8 @@
 #include <QHBoxLayout>
 
 BottomPanelWidget::BottomPanelWidget(QWidget *parent) : QWidget(parent) {
-    QVBoxLayout* layout = new QVBoxLayout(this);
-    QHBoxLayout* time_layout = new QHBoxLayout();
+    auto* layout = new QVBoxLayout(this); 
+    auto* time_layout = new QHBoxLayout(); 
 
     weather_label_ = new QLabel("Погода: Ясно", this);
     weather_label_->setStyleSheet("color: #e67e22; font-weight: bold;");

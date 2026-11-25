@@ -21,8 +21,8 @@ void Progress_saver::save(const std::string& path, const Greenhouse& greenhouse,
 
     file << "[STORAGE]\n";
     file << "capacity=" << storage.get_capacity() << "\n";
-    for (const auto& pair : storage.get_contents()) {
-        file << "item_" << pair.first << "=" << pair.second << "\n";
+    for (const auto& [crop, amount] : storage.get_contents()) { 
+        file << "item_" << crop << "=" << amount << "\n";
     }
 }
 
@@ -40,8 +40,8 @@ void Progress_saver::load(const std::string& path, Greenhouse& greenhouse, Stora
         auto pos = line.find('=');
         if (pos == std::string::npos) continue;
 
-        std::string key = line.substr(0, pos);
-        std::string val = line.substr(pos + 1);
+        auto key = line.substr(0, pos);
+        auto val = line.substr(pos + 1);
 
         try {
             if (key == "total_hours") time_manager.set_total_hours(std::stod(val));
@@ -54,7 +54,7 @@ void Progress_saver::load(const std::string& path, Greenhouse& greenhouse, Stora
             else if (key == "current_energy") greenhouse.set_current_energy(std::stod(val));
             else if (key == "capacity") storage.set_capacity(std::stod(val));
             else if (key.rfind("item_", 0) == 0) {
-                storage.add(key.substr(5), std::stod(val)); // 5 - длина "item_"
+                storage.add(key.substr(5), std::stod(val));
             }
         } catch (const std::exception&) {
             throw File_format_exception(path, line_num, "invalid value for key " + key);

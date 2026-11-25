@@ -5,12 +5,19 @@
 #include "Class/Inheritor/Inheritor2/Single_use_Equipment/Header/Fertilizer_Equipment.h"
 #include <fstream>
 
+namespace { 
+    void trim(std::string& s) {
+        s.erase(0, s.find_first_not_of(" \t\r\n"));
+        s.erase(s.find_last_not_of(" \t\r\n") + 1);
+    }
+}
+
 void Equipment_loader::save(const std::string& path, const Collection<std::unique_ptr<Equipment>>& equipment) {
     std::ofstream file(path);
     if (!file.is_open()) throw File_open_exception(path, "writing");
 
-    for (std::size_t i = 0; i < equipment.size(); ++i) {
-        const Equipment* eq = equipment[i].get();
+    for (const auto& eq_ptr : equipment) {
+        const Equipment* eq = eq_ptr.get();
         file << "[EQUIPMENT]\n";
         file << "type=" << eq->get_type() << "\n";
         file << "name=" << eq->get_name() << "\n";
@@ -20,7 +27,7 @@ void Equipment_loader::save(const std::string& path, const Collection<std::uniqu
         file << "wear=" << eq->get_wear_level() << "\n";
         
         if (eq->get_type() == "Watering_equipment" || eq->get_type() == "Fertilizer_equipment") {
-            const Single_use_equipment* single = dynamic_cast<const Single_use_equipment*>(eq);
+            auto single = dynamic_cast<const Single_use_equipment*>(eq);
             file << "resource=" << single->get_resource_left() << "\n";
         }
         file << "[/EQUIPMENT]\n\n";
@@ -35,14 +42,9 @@ Collection<std::unique_ptr<Equipment>> Equipment_loader::load(const std::string&
     std::string line;
     std::size_t line_num = 0;
 
-    std::string type="", name="";
-    double energy=0, wear=0, resource=100;
-    bool broken=false, is_on=false;
-
-    auto trim = [](std::string& s) {
-        s.erase(0, s.find_first_not_of(" \t\r\n"));
-        s.erase(s.find_last_not_of(" \t\r\n") + 1);
-    };
+    std::string type, name;
+    double energy = 0, wear = 0, resource = 100;
+    bool broken = false, is_on = false;
 
     while (std::getline(file, line)) {
         line_num++;
@@ -50,7 +52,7 @@ Collection<std::unique_ptr<Equipment>> Equipment_loader::load(const std::string&
         if (line.empty() || line[0] == '#') continue;
 
         if (line == "[EQUIPMENT]") {
-            type=""; name=""; energy=0; wear=0; resource=100; broken=false; is_on=false;
+            type = ""; name = ""; energy = 0; wear = 0; resource = 100; broken = false; is_on = false;
         } else if (line == "[/EQUIPMENT]") {
             try {
                 std::unique_ptr<Equipment> eq;
@@ -70,7 +72,8 @@ Collection<std::unique_ptr<Equipment>> Equipment_loader::load(const std::string&
         } else {
             auto pos = line.find('=');
             if (pos == std::string::npos) continue;
-            std::string key = line.substr(0, pos), val = line.substr(pos + 1);
+            auto key = line.substr(0, pos);
+            auto val = line.substr(pos + 1);
 
             try {
                 if (key == "type") type = val;

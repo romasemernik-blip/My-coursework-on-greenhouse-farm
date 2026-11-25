@@ -131,7 +131,7 @@ void Greenhouse::set_current_energy(double value) {
     current_energy_ = value;
 }
 
-void Greenhouse::update(double dt, bool global_light_on) {
+void Greenhouse::update(double dt, bool global_light_on) const {
     for (const auto& bed : beds_) {
         bed->update(dt, global_light_on);
     }

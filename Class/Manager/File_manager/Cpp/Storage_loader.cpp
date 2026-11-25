@@ -9,9 +9,8 @@ void Storage_loader::save_to_file(const std::string& path, const Storage& storag
     file << "[STORAGE_EXPORT]\n";
     file << "capacity=" << storage.get_capacity() << "\n";
     
-    const auto& contents = storage.get_contents();
-    for (const auto& pair : contents) {
-        file << pair.first << "=" << pair.second << "\n";
+    for (const auto& [crop, amount] : storage.get_contents()) {
+        file << crop << "=" << amount << "\n";
     }
 }
 
@@ -25,8 +24,8 @@ void Storage_loader::load_from_file(const std::string& path, Storage& storage) {
 
         auto pos = line.find('=');
         if (pos != std::string::npos) {
-            std::string key = line.substr(0, pos);
-            std::string val = line.substr(pos + 1);
+            auto key = line.substr(0, pos);
+            auto val = line.substr(pos + 1);
             
             if (key == "capacity") {
                 storage.set_capacity(std::stod(val));
