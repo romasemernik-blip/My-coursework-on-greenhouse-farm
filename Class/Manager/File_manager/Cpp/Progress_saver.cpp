@@ -12,8 +12,8 @@ void Progress_saver::save(const std::string& path,
         throw File_open_exception(path, "writing");
 
     file << "[TIME]\n";
-    file << "hour=" << time_manager.get_current_hour() << "\n";
-    file << "day=" << time_manager.get_current_day() << "\n";
+    // Сохраняем общее время в часах
+    file << "total_hours=" << time_manager.get_total_hours() << "\n";
     file << "speed=" << time_manager.get_speed_multiplier() << "\n";
 
     file << "[GREENHOUSE]\n";
@@ -52,8 +52,8 @@ void Progress_saver::load(const std::string& path,
         std::string val = line.substr(pos + 1);
 
         try {
-            if (key == "hour")            time_manager.set_current_hour(std::stod(val));
-            else if (key == "day")        time_manager.set_current_day(std::stoul(val));
+            // Загружаем новое поле total_hours
+            if (key == "total_hours")     time_manager.set_total_hours(std::stod(val));
             else if (key == "speed")      time_manager.set_speed_multiplier(std::stod(val));
             else if (key == "max_energy") greenhouse.set_max_energy(std::stod(val));
             else if (key == "current_energy") greenhouse.set_current_energy(std::stod(val));

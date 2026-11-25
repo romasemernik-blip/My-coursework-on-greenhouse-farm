@@ -1,5 +1,6 @@
 C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/GreenhouseSimulator_autogen/S2DYA7EHM4/moc_MainWindow.cpp: C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/UI/Header/MainWindow.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/GreenhouseSimulator_autogen/moc_predefs.h \
+  C:/Qt/6.12.0/mingw_64/include/QtCore/QMap \
   C:/Qt/6.12.0/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.12.0/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/q20bit.h \
@@ -175,6 +176,7 @@ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_
   C:/Qt/6.12.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.12.0/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/QComboBox \
+  C:/Qt/6.12.0/mingw_64/include/QtWidgets/QGridLayout \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/QMainWindow \
@@ -188,9 +190,13 @@ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractslider.h \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qboxlayout.h \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/qcombobox.h \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/qframe.h \
+  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qgridlayout.h \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlabel.h \
+  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlayout.h \
+  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlistview.h \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlistwidget.h \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/qmainwindow.h \

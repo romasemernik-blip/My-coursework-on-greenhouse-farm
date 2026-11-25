@@ -79,6 +79,7 @@ void File_manager::load_all(const std::string& folder,
                             Storage& storage,
                             Time_manager& time_manager) {
     load_plant_types(folder + "/plant_types.txt");
+    load_humans(folder + "/humans.txt"); 
     load_progress(folder, greenhouse, storage, time_manager);
 }
 
@@ -87,5 +88,6 @@ void File_manager::save_all(const std::string& folder,
                             const Storage& storage,
                             const Time_manager& time_manager) const {
     save_plant_types(folder + "/plant_types.txt");
+    
     save_progress(folder, greenhouse, storage, time_manager);
 }

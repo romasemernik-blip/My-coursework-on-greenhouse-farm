@@ -17,6 +17,7 @@ public:
     // Управление скоростью
     void set_speed_multiplier(double speed);
     double get_speed_multiplier() const noexcept;
+    void set_total_hours(double hours);
     
     void set_paused(bool paused);
     bool get_is_paused() const noexcept;

@@ -1,3 +1,4 @@
 Lighting;GrowLight1;150.0;0;10.0
+Lighting;GrowLight2;150.0;0;15.0
 Watering_equipment;WaterPump;50.0;0;5.0;100.0
 Fertilizer_equipment;FertPump;60.0;1;90.0;50.0

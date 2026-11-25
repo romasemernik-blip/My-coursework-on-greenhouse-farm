@@ -435,6 +435,12 @@ CMakeFiles/GreenhouseSimulator.dir/GreenhouseSimulator_autogen/mocs_compilation.
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/QComboBox \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qcombobox.h \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/QTabWidget \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/QGridLayout \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qgridlayout.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlayout.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qboxlayout.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/QMap \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Manager/File_manager/Header/File_manager.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Manager/File_manager/Header/Plant_type_data.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Greenhouse.h \

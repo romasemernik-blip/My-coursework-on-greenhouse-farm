@@ -434,6 +434,12 @@ CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj: \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/QComboBox \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qcombobox.h \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/QTabWidget \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/QGridLayout \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qgridlayout.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlayout.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qboxlayout.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/QMap \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Manager/File_manager/Header/File_manager.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Manager/File_manager/Header/Plant_type_data.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Greenhouse.h \
@@ -485,11 +491,12 @@ CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj: \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Schedule.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Operation.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Manager/File_manager/Header/Storage_loader.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Inheritor2/Permanent_Equipment/Header/Lighting.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Equipment/Header/Permanent_Equipment.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Inheritor2/Single_use_Equipment/Header/Watering_Equipment.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Equipment/Header/Single_use_Equipment.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Inheritor2/Single_use_Equipment/Header/Fertilizer_Equipment.h \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/QVBoxLayout \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qboxlayout.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlayout.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlayoutitem.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qgridlayout.h \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/QHBoxLayout \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/QFileDialog \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qfiledialog.h \
