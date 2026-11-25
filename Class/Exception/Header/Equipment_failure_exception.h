@@ -2,7 +2,6 @@
 #include "Class/Exception/Header/Greenhouse_exception.h"
 #include <string>
 #include <sstream>
-#include <iomanip>
 
 class Equipment_failure_exception : public Greenhouse_exception {
 private:
@@ -21,9 +20,7 @@ public:
 private:
     static std::string make_message(const std::string& name, double wear) {
         std::ostringstream os;
-        os << std::fixed << std::setprecision(1)
-           << "Equipment \"" << name << "\" is broken (wear "
-           << wear << "%)";
+        os << "Equipment \"" << name << "\" is broken (wear " << wear << "%)";
         return os.str();
     }
 };

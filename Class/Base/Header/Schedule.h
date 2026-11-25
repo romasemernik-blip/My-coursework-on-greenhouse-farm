@@ -24,7 +24,7 @@ public:
     void clear_operations();
 
     void update(double dt);
-    void execute_all();
+    void execute_all() const;
 
     void pause();
     void resume();

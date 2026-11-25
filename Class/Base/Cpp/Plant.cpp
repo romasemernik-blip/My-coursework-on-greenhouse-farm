@@ -77,9 +77,7 @@ void Plant::heal(double amount) {
 void Plant::update(double dt, double bed_moisture, double bed_ph, bool is_light_on) {
     if (get_is_dead()) return;
 
-    bool is_bad_conditions = (bed_moisture < 30.0) || (bed_ph < 5.5 || bed_ph > 7.5);
-    
-    if (is_bad_conditions) {
+    if (bool is_bad_conditions = (bed_moisture < 30.0) || (bed_ph < 5.5 || bed_ph > 7.5); is_bad_conditions) {
         damage(5.0 * dt);
         if (get_is_dead()) return;
     } else {

@@ -26,23 +26,24 @@ void Schedule::update(double dt) {
     if (dt < 0.0) throw Invalid_argument_exception("dt", "must be non-negative");
 
     for (const auto& op : operations_) {
-        Auto_operation* auto_op = dynamic_cast<Auto_operation*>(op.get());
+        auto* auto_op = dynamic_cast<Auto_operation*>(op.get());
         if (auto_op) auto_op->tick(dt);
     }
 }
 
-void Schedule::execute_all() {
+void Schedule::execute_all() const { 
     if (is_paused_) return;
 
     std::vector<Operation*> ready_ops;
     for (const auto& op : operations_) {
-        Auto_operation* auto_op = dynamic_cast<Auto_operation*>(op.get());
+        auto* auto_op = dynamic_cast<Auto_operation*>(op.get()); 
         if (auto_op && auto_op->is_ready()) {
             ready_ops.push_back(auto_op);
         } else if (!auto_op) {
             ready_ops.push_back(op.get());
         }
     }
+
 
     std::sort(ready_ops.begin(), ready_ops.end(), [](const Operation* a, const Operation* b) {
         return a->get_priority() > b->get_priority();

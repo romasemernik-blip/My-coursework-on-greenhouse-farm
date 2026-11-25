@@ -4,8 +4,6 @@
 
 class Greenhouse_exception : public std::runtime_error {
 public:
-    explicit Greenhouse_exception(const std::string& message)
-        : std::runtime_error(message) {}
-
+    using std::runtime_error::runtime_error; 
     ~Greenhouse_exception() override = default;
 };

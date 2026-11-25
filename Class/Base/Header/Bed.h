@@ -58,5 +58,5 @@ public:
     void set_co2_level(double value);
     void set_length(double value);
     void set_width(double value);
-    void update(double dt, bool is_light_on);
+    void update (double dt, bool is_light_on) const;
 };

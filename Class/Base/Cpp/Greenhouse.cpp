@@ -27,8 +27,10 @@ double Greenhouse::get_free_area() const noexcept {
 void Greenhouse::add_bed(std::unique_ptr<Bed> bed) {
     if (!bed) throw Invalid_argument_exception("bed", "must not be null");
     double need = bed->get_area();
-    double free_area = get_free_area();
-    if (need > free_area) throw Greenhouse_full_exception(static_cast<std::size_t>(need), static_cast<std::size_t>(free_area));
+    
+    if (double free_area = get_free_area(); need > free_area) {
+        throw Greenhouse_full_exception(static_cast<std::size_t>(need), static_cast<std::size_t>(free_area));
+    }
     beds_.push_back(std::move(bed));
 }
 

@@ -110,7 +110,7 @@ void Bed::set_width(double value) {
     width_ = value;
 }
 
-void Bed::update(double dt, bool is_light_on) {
+void Bed::update(double dt, bool is_light_on) const {
     for (const auto& plant : plants_) {
         plant->update(dt, moisture_, soil_ph_, is_light_on);
     }
