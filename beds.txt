@@ -1,3 +1,39 @@
-1;2;5.0;2.0;6.5;45.0;0.0;400.0
-3;4;6.0;2.5;6.8;50.0;0.0;410.0
-5;6;7.0;3.0;7.0;55.0;0.0;420.0
+[BED]
+row=1
+crop_row=2
+length=5.0
+width=2.0
+ph=6.5
+moisture=45.0
+  [PLANT]
+  id=plant_001
+  type=Tomato
+  height=10.5
+  water_req=1.5
+  opt_temp=22.5
+  opt_hum=60.0
+  stage=3
+  stage_prog=0.5
+  stage_dur=100.0
+  [/PLANT]
+  [PLANT]
+  id=plant_002
+  type=Cucumber
+  height=5.0
+  water_req=2.0
+  opt_temp=24.0
+  opt_hum=70.0
+  stage=1
+  stage_prog=0.1
+  stage_dur=80.0
+  [/PLANT]
+[/BED]
+
+[BED]
+row=3
+crop_row=4
+length=6.0
+width=2.5
+ph=6.8
+moisture=50.0
+[/BED]

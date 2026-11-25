@@ -217,7 +217,6 @@ CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Human_loader.c
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Growth_stage.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Equipment.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Human/Header/Operator.h \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Config/Header/Config.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \

@@ -1,5 +1,5 @@
 [TIME]
-total_hours=48.0
+total_hours=24.0
 speed=1.0
 
 [GREENHOUSE]
@@ -12,6 +12,5 @@ current_energy=3200.0
 
 [STORAGE]
 capacity=1000.0
-load=200.0
-Tomato=100.0
-Cucumber=100.0
+item_Tomato=150.0
+item_Cucumber=50.0
