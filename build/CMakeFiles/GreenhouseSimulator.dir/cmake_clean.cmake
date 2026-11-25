@@ -18,6 +18,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Schedule.cpp.obj.d"
   "CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Storage.cpp.obj"
   "CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Storage.cpp.obj.d"
+  "CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.obj"
+  "CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.obj.d"
   "CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Equipment/Cpp/Permanent_Equipment.cpp.obj"
   "CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Equipment/Cpp/Permanent_Equipment.cpp.obj.d"
   "CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Equipment/Cpp/Single_use_Equipment.cpp.obj"

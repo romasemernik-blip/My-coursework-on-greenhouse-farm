@@ -41,12 +41,14 @@ public:
     double             get_water_requirement()   const noexcept;
     double             get_current_health()      const noexcept;
     double             get_optimal_temperature() const noexcept;
+    double             get_hours_until_mature()  const noexcept;
     double             get_optimal_humidity()    const noexcept;
     Growth_stage       get_stage()               const noexcept;
     double             get_stage_progress()      const noexcept;
     double             get_stage_duration()      const noexcept;
     bool               get_is_dead()             const noexcept;
     bool               get_is_mature()           const noexcept;
+    
 
     void set_id(const std::string& value);
     void set_type(const std::string& value);

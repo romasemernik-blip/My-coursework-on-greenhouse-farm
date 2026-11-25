@@ -247,6 +247,7 @@ C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Header/MainWindow.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functexcept.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functional_hash.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h
@@ -348,6 +349,7 @@ C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Header/MainWindow.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/numeric_traits.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/type_traits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/functional
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip
@@ -400,8 +402,10 @@ C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Header/MainWindow.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/version
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h
@@ -486,22 +490,25 @@ C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Header/MainWindow.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Exception/Header/Plant_dead_exception.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Exception/Header/Sensor_read_exception.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Exception/Header/Storage_overflow_exception.h
+ mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Human/Header/Operator.h
+ mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Logger/Header/Action_logger.h
+ mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Logger/Header/System_logger.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Header/File_manager.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Header/Plant_type_data.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/Time_manager/Header/Time_manager.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Template/Collection.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Header/MainWindow.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/GreenhouseSimulator_autogen/moc_predefs.h
-C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/Time_manager/Cpp/Time_manager.cpp
-C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Schedule.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Equipment/Cpp/Permanent_Equipment.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Bed.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Greenhouse.cpp
+C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/Time_manager/Cpp/Time_manager.cpp
+C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Schedule.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Equipment.cpp
-C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Human.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Plant.cpp
-C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Operation.cpp
+C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Human.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Equipment_loader.cpp
+C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Operation.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Storage.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Equipment/Cpp/Single_use_Equipment.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Human/Cpp/Agronomist.cpp
@@ -523,3 +530,5 @@ C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/Input_manager/Cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Cpp/MainWindow.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/main.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Bed_loader.cpp
+C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Logger/Cpp/Action_logger.cpp
+C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Logger/Cpp/System_logger.cpp

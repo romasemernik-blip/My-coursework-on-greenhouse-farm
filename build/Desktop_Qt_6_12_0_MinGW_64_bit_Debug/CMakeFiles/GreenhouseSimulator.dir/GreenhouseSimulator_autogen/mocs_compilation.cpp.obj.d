@@ -491,6 +491,13 @@ CMakeFiles/GreenhouseSimulator.dir/GreenhouseSimulator_autogen/mocs_compilation.
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Manager/Time_manager/Header/Time_manager.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Schedule.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Operation.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Human/Header/Operator.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Logger/Header/System_logger.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Logger/Header/Action_logger.h \
  C:/Qt/6.12.0/mingw_64/include/QtCore/qtmochelpers.h \
  C:/Qt/6.12.0/mingw_64/include/QtCore/qtmocconstants.h \
  C:/Qt/6.12.0/mingw_64/include/QtCore/q20algorithm.h

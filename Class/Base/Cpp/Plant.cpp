@@ -161,3 +161,23 @@ void Plant::set_stage_duration(double value) {
         throw Invalid_argument_exception("stage_duration", "must be positive");
     stage_duration_hours_ = value;
 }
+
+double Plant::get_hours_until_mature() const noexcept {
+    if (stage_ == Growth_stage::Fruiting || stage_ == Growth_stage::Dead) return 0.0;
+    
+    double remaining = (1.0 - stage_progress_) * stage_duration_hours_;
+    
+    switch (stage_) {
+    case Growth_stage::Seed:
+        remaining += 48.0 + 36.0 + 72.0;
+        break;
+    case Growth_stage::Vegetative:
+        remaining += 36.0 + 72.0;
+        break;
+    case Growth_stage::Flowering:
+        remaining += 72.0;
+        break;
+    default: break;
+    }
+    return remaining;
+}

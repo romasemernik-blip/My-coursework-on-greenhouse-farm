@@ -96,7 +96,9 @@ set(HEADERS
 
 add_executable(GreenhouseSimulator ${SOURCES} ${HEADERS}
     Class/Logger/Cpp/System_logger.cpp
-    Class/Logger/Cpp/Action_logger.cpp)
+    Class/Logger/Cpp/Action_logger.cpp
+    Class/Base/Cpp/Weather.cpp
+    Class/Inheritor/Weather/Header/Storm.h)
 
 target_include_directories(GreenhouseSimulator PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 

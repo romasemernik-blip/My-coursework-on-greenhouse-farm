@@ -490,12 +490,17 @@ CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj: \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Manager/Time_manager/Header/Time_manager.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Schedule.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Operation.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Human/Header/Operator.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Logger/Header/System_logger.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Logger/Header/Action_logger.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Manager/File_manager/Header/Storage_loader.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Inheritor2/Permanent_Equipment/Header/Lighting.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Equipment/Header/Permanent_Equipment.h \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Inheritor2/Single_use_Equipment/Header/Watering_Equipment.h \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Equipment/Header/Single_use_Equipment.h \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Inheritor2/Single_use_Equipment/Header/Fertilizer_Equipment.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Human/Header/Agronomist.h \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/QVBoxLayout \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/QHBoxLayout \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/QFileDialog \
@@ -524,4 +529,27 @@ CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj: \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qgroupbox.h \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/QInputDialog \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qinputdialog.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlineedit.h
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlineedit.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/QCloseEvent \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qevent.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/qcoreevent.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qeventpoint.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qvector2d.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qvectornd.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qpointingdevice.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qinputdevice.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qscreen.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/QList \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/QObject \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/QRect \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/QSize \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/QSizeF \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/QTransform \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/qnativeinterface.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qscreen_platform.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qguiapplication.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/qcoreapplication.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qinputmethod.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qguiapplication_platform.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/QDateTime

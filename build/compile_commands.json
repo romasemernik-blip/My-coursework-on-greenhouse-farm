@@ -202,5 +202,11 @@
   "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Logger/Cpp/Action_logger.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Logger/Cpp/Action_logger.cpp\"",
   "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Logger/Cpp/Action_logger.cpp",
   "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Logger/Cpp/Action_logger.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Weather.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Weather.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.obj"
 }
 ]

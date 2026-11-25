@@ -246,6 +246,7 @@ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h \
+  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functexcept.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functional_hash.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h \
@@ -347,6 +348,7 @@ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/numeric_traits.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/type_traits.h \
+  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/functional \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip \
@@ -399,8 +401,10 @@ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/version \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
+  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
@@ -485,6 +489,9 @@ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Exception/Header/Plant_dead_exception.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Exception/Header/Sensor_read_exception.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Exception/Header/Storage_overflow_exception.h \
+  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Human/Header/Operator.h \
+  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Logger/Header/Action_logger.h \
+  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Logger/Header/System_logger.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Manager/File_manager/Header/File_manager.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Manager/File_manager/Header/Plant_type_data.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Manager/Time_manager/Header/Time_manager.h \
