@@ -1,38 +1,32 @@
 #pragma once
-#include <cstddef>
+#include <string>
 
 class Time_manager {
 private:
-    double real_time_seconds_;
-    double current_hour_;
-    std::size_t current_day_;
+    // Абсолютное игровое время в часах (например, 26.5 = 1 день, 2 часа 30 минут)
+    double total_hours_; 
     double speed_multiplier_;
     bool is_paused_;
 
 public:
     Time_manager();
-    Time_manager(double speed_multiplier);
-    Time_manager(const Time_manager& other) = default;
-    Time_manager(Time_manager&& other) noexcept = default;
-    Time_manager& operator=(const Time_manager& other) = default;
-    Time_manager& operator=(Time_manager&& other) noexcept = default;
-    ~Time_manager() = default;
-
+    
+    // Обновление времени (вызывается из таймера в MainWindow)
     void tick(double real_seconds);
-    void reset();
+    
+    // Управление скоростью
+    void set_speed_multiplier(double speed);
+    double get_speed_multiplier() const noexcept;
+    
+    void set_paused(bool paused);
+    bool get_is_paused() const noexcept;
 
-    void pause();
-    void resume();
-    void toggle_pause();
+    // Получение текущего времени
+    double get_total_hours() const noexcept;
+    int get_current_day() const noexcept;
+    int get_current_hour() const noexcept;
+    int get_current_minute() const noexcept;
 
-    double get_real_time_seconds() const noexcept;
-    double get_current_hour()      const noexcept;
-    std::size_t get_current_day()  const noexcept;
-    double get_speed_multiplier()  const noexcept;
-    bool   get_is_paused()         const noexcept;
-    bool   is_daytime()            const noexcept;
-
-    void set_speed_multiplier(double value);
-    void set_current_hour(double value);
-    void set_current_day(std::size_t value);
+    // Форматированная строка времени (например, "День 1 | 12:30")
+    std::string get_formatted_time() const;
 };
