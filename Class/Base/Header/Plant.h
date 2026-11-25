@@ -1,28 +1,24 @@
 #pragma once
 #include <string>
+#include <string_view>
 #include "Class/Base/Header/Growth_stage.h"
 
 class Plant {
-protected:
+private:
     std::string id_;
     std::string type_;
-    double height_;
-    double water_requirement_;
-    double current_health_;
-    double optimal_temperature_;
-    double optimal_humidity_;
-    Growth_stage stage_;
-    double stage_progress_;
-    double stage_duration_hours_;
+    double height_ = 0.0;
+    double water_requirement_ = 0.0;
+    double current_health_ = 100.0;
+    double optimal_temperature_ = 22.0;
+    double optimal_humidity_ = 60.0;
+    Growth_stage stage_ = Growth_stage::Seed;
+    double stage_progress_ = 0.0;
+    double stage_duration_hours_ = 24.0;
 
 public:
-    Plant();
-    Plant(const std::string& id,
-          const std::string& type,
-          double height,
-          double water_requirement,
-          double optimal_temperature,
-          double optimal_humidity);
+    Plant() = default;
+    Plant(std::string_view id, std::string_view type, double height, double water_requirement, double optimal_temperature, double optimal_humidity);
     Plant(const Plant& other) = default;
     Plant(Plant&& other) noexcept = default;
     Plant& operator=(const Plant& other) = default;
@@ -48,10 +44,9 @@ public:
     double             get_stage_duration()      const noexcept;
     bool               get_is_dead()             const noexcept;
     bool               get_is_mature()           const noexcept;
-    
 
-    void set_id(const std::string& value);
-    void set_type(const std::string& value);
+    void set_id(std::string_view value);
+    void set_type(std::string_view value);
     void set_height(double value);
     void set_water_requirement(double value);
     void set_current_health(double value);

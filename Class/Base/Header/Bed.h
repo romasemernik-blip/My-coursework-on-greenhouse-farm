@@ -7,31 +7,27 @@
 
 class Bed {
 private:
-    int numb_row_;
-    int numb_crop_row_;
-    double soil_ph_;
-    double moisture_;
-    double readiness_;
-    double co2_level_;
-    double length_;
-    double width_;
+    int numb_row_ = 0;
+    int numb_crop_row_ = 0;
+    double soil_ph_ = 7.0;
+    double moisture_ = 50.0;
+    double readiness_ = 0.0;
+    double co2_level_ = 400.0;
+    double length_ = 0.0;
+    double width_ = 0.0;
     Collection<std::unique_ptr<Plant>> plants_;
     Collection<std::unique_ptr<Equipment>> equipments_;
 
 public:
-    Bed();
-    Bed(int numb_row,
-        int numb_crop_row,
-        double length,
-        double width);
+    Bed() = default;
+    Bed(int numb_row, int numb_crop_row, double length, double width);
     Bed(const Bed& other) = delete;
-    Bed(Bed&& other) noexcept;
+    Bed(Bed&& other) noexcept = default;
     Bed& operator=(const Bed& other) = delete;
-    Bed& operator=(Bed&& other) noexcept;
+    Bed& operator=(Bed&& other) noexcept = default;
     ~Bed() = default;
 
     double get_area() const noexcept;
-
     void add_plant(std::unique_ptr<Plant> plant);
     void add_equipment(std::unique_ptr<Equipment> equipment);
     std::unique_ptr<Plant> remove_plant(std::size_t index);

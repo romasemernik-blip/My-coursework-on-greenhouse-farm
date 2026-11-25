@@ -3,28 +3,21 @@
 #include "Class/Base/Header/Bed.h"
 #include "Class/Template/Collection.h"
 #include <memory>
-
-class Bed;
+#include <string_view>
 
 class Agronomist : public Human {
 private:
-    int start_year_;
-    int experience_years_;
+    int start_year_ = 0;
+    int experience_years_ = 0;
     Collection<std::unique_ptr<Bed>> assigned_beds_;
 
 public:
-    Agronomist();
-    Agronomist(const std::string& first_name,
-               const std::string& last_name,
-               const std::string& middle_name,
-               std::size_t birth_date,
-               const std::string& gender,
-               int start_year,
-               int experience_years);
+    Agronomist() = default;
+    Agronomist(std::string_view first_name, std::string_view last_name, std::string_view middle_name, std::size_t birth_date, std::string_view gender, int start_year, int experience_years);
     Agronomist(const Agronomist& other) = delete;
-    Agronomist(Agronomist&& other) noexcept;
+    Agronomist(Agronomist&& other) noexcept = default;
     Agronomist& operator=(const Agronomist& other) = delete;
-    Agronomist& operator=(Agronomist&& other) noexcept;
+    Agronomist& operator=(Agronomist&& other) noexcept = default;
     ~Agronomist() override = default;
 
     std::string get_role() const override;

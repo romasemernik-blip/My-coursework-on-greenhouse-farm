@@ -1,21 +1,22 @@
 #pragma once
 #include <string>
+#include <string_view>
 
 class Equipment {
-protected:
+private:
     std::string name_;
-    bool        is_broken_;
-    bool        is_on_;
-    double      energy_requirement_;
-    double      wear_level_;
+    bool        is_broken_ = false;
+    bool        is_on_ = false;
+    double      energy_requirement_ = 0.0;
+    double      wear_level_ = 0.0;
 
 public:
-    Equipment();
-    Equipment(const std::string& name, double energy_requirement);
-    Equipment(const Equipment& other);
-    Equipment(Equipment&& other) noexcept;
-    Equipment& operator=(const Equipment& other);
-    Equipment& operator=(Equipment&& other) noexcept;
+    Equipment() = default;
+    Equipment(std::string_view name, double energy_requirement);
+    Equipment(const Equipment& other) = default;
+    Equipment(Equipment&& other) noexcept = default;
+    Equipment& operator=(const Equipment& other) = default;
+    Equipment& operator=(Equipment&& other) noexcept = default;
     virtual ~Equipment() = default;
 
     virtual void turn_on() = 0;
@@ -31,7 +32,7 @@ public:
     double             get_energy_requirement() const noexcept;
     double             get_wear_level()         const noexcept;
 
-    void set_name(const std::string& value);
+    void set_name(std::string_view value);
     void set_is_broken(bool value);
     void set_is_on(bool value);
     void set_energy_requirement(double value);

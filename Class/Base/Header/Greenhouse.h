@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <string_view>
 #include <memory>
 #include "Class/Template/Collection.h"
 #include "Class/Base/Header/Bed.h"
@@ -8,25 +9,21 @@
 class Greenhouse {
 private:
     std::string name_;
-    double length_;
-    double width_;
-    double height_;
-    double max_energy_;
-    double current_energy_;
+    double length_ = 0.0;
+    double width_ = 0.0;
+    double height_ = 0.0;
+    double max_energy_ = 0.0;
+    double current_energy_ = 0.0;
     Collection<std::unique_ptr<Bed>> beds_;
     Collection<std::unique_ptr<Equipment>> equipment_;
 
 public:
-    Greenhouse();
-    Greenhouse(const std::string& name,
-               double length,
-               double width,
-               double height,
-               double max_energy);
+    Greenhouse() = default;
+    Greenhouse(std::string_view name, double length, double width, double height, double max_energy);
     Greenhouse(const Greenhouse& other) = delete;
-    Greenhouse(Greenhouse&& other) noexcept;
+    Greenhouse(Greenhouse&& other) noexcept = default;
     Greenhouse& operator=(const Greenhouse& other) = delete;
-    Greenhouse& operator=(Greenhouse&& other) noexcept;
+    Greenhouse& operator=(Greenhouse&& other) noexcept = default;
     ~Greenhouse() = default;
 
     double get_total_area() const noexcept;
@@ -60,7 +57,7 @@ public:
     const Collection<std::unique_ptr<Bed>>& get_beds() const noexcept;
     const Collection<std::unique_ptr<Equipment>>& get_equipment_collection() const noexcept;
 
-    void set_name(const std::string& value);
+    void set_name(std::string_view value);
     void set_length(double value);
     void set_width(double value);
     void set_height(double value);

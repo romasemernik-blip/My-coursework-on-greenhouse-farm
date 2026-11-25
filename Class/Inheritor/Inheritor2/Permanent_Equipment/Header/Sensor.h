@@ -1,20 +1,18 @@
 #pragma once
 #include "Class/Inheritor/Equipment/Header/Permanent_Equipment.h"
+#include <string>
+#include <string_view>
 
 class Sensor : public Permanent_equipment {
-protected:
-    double last_value_;
+private:
+    double last_value_ = 0.0;
     std::string units_;
-    double min_value_;
-    double max_value_;
+    double min_value_ = -100.0;
+    double max_value_ = 100.0;
 
 public:
-    Sensor();
-    Sensor(const std::string& name,
-           double energy_requirement,
-           const std::string& units,
-           double min_value,
-           double max_value);
+    Sensor() = default;
+    Sensor(std::string_view name, double energy_requirement, std::string_view units, double min_value, double max_value);
     Sensor(const Sensor& other) = default;
     Sensor(Sensor&& other) noexcept = default;
     Sensor& operator=(const Sensor& other) = default;
@@ -30,7 +28,7 @@ public:
     double             get_max_value()  const noexcept;
 
     void set_last_value(double value);
-    void set_units(const std::string& value);
+    void set_units(std::string_view value);
     void set_min_value(double value);
     void set_max_value(double value);
 };

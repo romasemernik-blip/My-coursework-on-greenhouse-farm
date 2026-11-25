@@ -6,17 +6,17 @@
 
 class Schedule {
 private:
-    bool is_paused_;
+    bool is_paused_ = false;
     Collection<std::unique_ptr<Operation>> operations_;
-    Time_manager* time_manager_;
+    Time_manager* time_manager_ = nullptr;
 
 public:
-    Schedule();
-    Schedule(Time_manager* time_manager);
+    Schedule() = default;
+    explicit Schedule(Time_manager* time_manager); 
     Schedule(const Schedule& other) = delete;
-    Schedule(Schedule&& other) noexcept;
+    Schedule(Schedule&& other) noexcept = default;
     Schedule& operator=(const Schedule& other) = delete;
-    Schedule& operator=(Schedule&& other) noexcept;
+    Schedule& operator=(Schedule&& other) noexcept = default;
     ~Schedule() = default;
 
     void add_operation(std::unique_ptr<Operation> operation);

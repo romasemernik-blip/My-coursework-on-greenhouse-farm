@@ -3,5 +3,5 @@
 
 class Storm : public Weather {
 public:
-    Storm() : Weather("Гроза", 3.0, -0.05, 0.5) {} // Сильно поливает, кислит, стресс для роста
+    Storm() : Weather("Гроза", 3.0, -0.05, 0.5) {}
 };

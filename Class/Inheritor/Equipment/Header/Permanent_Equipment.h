@@ -1,10 +1,11 @@
 #pragma once
 #include "Class/Base/Header/Equipment.h"
+#include <string_view>
 
 class Permanent_equipment : public Equipment {
 public:
-    Permanent_equipment();
-    Permanent_equipment(const std::string& name, double energy_requirement);
+    Permanent_equipment() = default;
+    Permanent_equipment(std::string_view name, double energy_requirement);
     Permanent_equipment(const Permanent_equipment& other) = default;
     Permanent_equipment(Permanent_equipment&& other) noexcept = default;
     Permanent_equipment& operator=(const Permanent_equipment& other) = default;

@@ -1,15 +1,16 @@
 #pragma once
 #include <string>
+#include <string_view>
 
 class Weather {
-protected:
+private:
     std::string name_;
-    double moisture_effect_; // Изменение влажности в час
-    double ph_effect_;       // Изменение pH в час
-    double growth_modifier_; // Множитель роста (1.0 = норма)
+    double moisture_effect_ = 0.0;
+    double ph_effect_ = 0.0;
+    double growth_modifier_ = 1.0;
 
 public:
-    Weather(const std::string& name, double moisture_effect, double ph_effect, double growth_modifier);
+    Weather(std::string_view name, double moisture_effect, double ph_effect, double growth_modifier);
     virtual ~Weather() = default;
 
     const std::string& get_name() const noexcept;
