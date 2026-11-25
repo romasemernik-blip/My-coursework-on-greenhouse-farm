@@ -610,6 +610,54 @@ Class/Inheritor/Operation/Cpp/Planting_crop.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GreenhouseSimulator.dir\build.make CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Operation/Cpp/Planting_crop.cpp.s
 .PHONY : Class/Inheritor/Operation/Cpp/Planting_crop.cpp.s
 
+Class/Manager/File_manager/Cpp/Bed_loader.obj: Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj
+.PHONY : Class/Manager/File_manager/Cpp/Bed_loader.obj
+
+# target to build an object file
+Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GreenhouseSimulator.dir\build.make CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj
+.PHONY : Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj
+
+Class/Manager/File_manager/Cpp/Bed_loader.i: Class/Manager/File_manager/Cpp/Bed_loader.cpp.i
+.PHONY : Class/Manager/File_manager/Cpp/Bed_loader.i
+
+# target to preprocess a source file
+Class/Manager/File_manager/Cpp/Bed_loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GreenhouseSimulator.dir\build.make CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.i
+.PHONY : Class/Manager/File_manager/Cpp/Bed_loader.cpp.i
+
+Class/Manager/File_manager/Cpp/Bed_loader.s: Class/Manager/File_manager/Cpp/Bed_loader.cpp.s
+.PHONY : Class/Manager/File_manager/Cpp/Bed_loader.s
+
+# target to generate assembly for a file
+Class/Manager/File_manager/Cpp/Bed_loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GreenhouseSimulator.dir\build.make CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.s
+.PHONY : Class/Manager/File_manager/Cpp/Bed_loader.cpp.s
+
+Class/Manager/File_manager/Cpp/Equipment_loader.obj: Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj
+.PHONY : Class/Manager/File_manager/Cpp/Equipment_loader.obj
+
+# target to build an object file
+Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GreenhouseSimulator.dir\build.make CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj
+.PHONY : Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj
+
+Class/Manager/File_manager/Cpp/Equipment_loader.i: Class/Manager/File_manager/Cpp/Equipment_loader.cpp.i
+.PHONY : Class/Manager/File_manager/Cpp/Equipment_loader.i
+
+# target to preprocess a source file
+Class/Manager/File_manager/Cpp/Equipment_loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GreenhouseSimulator.dir\build.make CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.i
+.PHONY : Class/Manager/File_manager/Cpp/Equipment_loader.cpp.i
+
+Class/Manager/File_manager/Cpp/Equipment_loader.s: Class/Manager/File_manager/Cpp/Equipment_loader.cpp.s
+.PHONY : Class/Manager/File_manager/Cpp/Equipment_loader.s
+
+# target to generate assembly for a file
+Class/Manager/File_manager/Cpp/Equipment_loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GreenhouseSimulator.dir\build.make CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.s
+.PHONY : Class/Manager/File_manager/Cpp/Equipment_loader.cpp.s
+
 Class/Manager/File_manager/Cpp/File_manager.obj: Class/Manager/File_manager/Cpp/File_manager.cpp.obj
 .PHONY : Class/Manager/File_manager/Cpp/File_manager.obj
 
@@ -942,6 +990,12 @@ help:
 	@echo ... Class/Inheritor/Operation/Cpp/Planting_crop.obj
 	@echo ... Class/Inheritor/Operation/Cpp/Planting_crop.i
 	@echo ... Class/Inheritor/Operation/Cpp/Planting_crop.s
+	@echo ... Class/Manager/File_manager/Cpp/Bed_loader.obj
+	@echo ... Class/Manager/File_manager/Cpp/Bed_loader.i
+	@echo ... Class/Manager/File_manager/Cpp/Bed_loader.s
+	@echo ... Class/Manager/File_manager/Cpp/Equipment_loader.obj
+	@echo ... Class/Manager/File_manager/Cpp/Equipment_loader.i
+	@echo ... Class/Manager/File_manager/Cpp/Equipment_loader.s
 	@echo ... Class/Manager/File_manager/Cpp/File_manager.obj
 	@echo ... Class/Manager/File_manager/Cpp/File_manager.i
 	@echo ... Class/Manager/File_manager/Cpp/File_manager.s

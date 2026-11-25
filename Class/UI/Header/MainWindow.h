@@ -15,7 +15,7 @@
 #include "Class/Base/Header/Greenhouse.h"
 #include "Class/Base/Header/Storage.h"
 #include "Class/Manager/Time_manager/Header/Time_manager.h"
-#include "Class/Manager/Schedule/Header/Schedule.h"
+#include "Class/Base/Header/Schedule.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -32,6 +32,7 @@ private slots:
     void on_load_partial_clicked();
     
     void on_add_bed_clicked();
+    void on_water_fertilize_clicked();
     void on_remove_bed_clicked();
     
     void on_plant_clicked();

@@ -46,6 +46,7 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         "on_save_full_clicked",
         "on_load_partial_clicked",
         "on_add_bed_clicked",
+        "on_water_fertilize_clicked",
         "on_remove_bed_clicked",
         "on_plant_clicked",
         "on_water_clicked",
@@ -75,34 +76,36 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'on_add_bed_clicked'
         QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_remove_bed_clicked'
+        // Slot 'on_water_fertilize_clicked'
         QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_plant_clicked'
+        // Slot 'on_remove_bed_clicked'
         QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_water_clicked'
+        // Slot 'on_plant_clicked'
         QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_fertilize_clicked'
+        // Slot 'on_water_clicked'
         QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_collect_to_storage_clicked'
+        // Slot 'on_fertilize_clicked'
         QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_remove_dead_clicked'
+        // Slot 'on_collect_to_storage_clicked'
         QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_toggle_light_clicked'
+        // Slot 'on_remove_dead_clicked'
         QtMocHelpers::SlotData<void()>(13, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_repair_equipment_clicked'
+        // Slot 'on_toggle_light_clicked'
         QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_assign_task_clicked'
+        // Slot 'on_repair_equipment_clicked'
         QtMocHelpers::SlotData<void()>(15, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_assign_task_clicked'
+        QtMocHelpers::SlotData<void()>(16, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'on_speed_changed'
-        QtMocHelpers::SlotData<void(int)>(16, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 17 },
+        QtMocHelpers::SlotData<void(int)>(17, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 18 },
         }}),
         // Slot 'on_tree_item_clicked'
-        QtMocHelpers::SlotData<void(QTreeWidgetItem *, int)>(18, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { 0x80000000 | 19, 20 }, { QMetaType::Int, 21 },
+        QtMocHelpers::SlotData<void(QTreeWidgetItem *, int)>(19, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 20, 21 }, { QMetaType::Int, 22 },
         }}),
         // Slot 'on_export_storage_clicked'
-        QtMocHelpers::SlotData<void()>(22, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(23, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -131,18 +134,19 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 2: _t->on_save_full_clicked(); break;
         case 3: _t->on_load_partial_clicked(); break;
         case 4: _t->on_add_bed_clicked(); break;
-        case 5: _t->on_remove_bed_clicked(); break;
-        case 6: _t->on_plant_clicked(); break;
-        case 7: _t->on_water_clicked(); break;
-        case 8: _t->on_fertilize_clicked(); break;
-        case 9: _t->on_collect_to_storage_clicked(); break;
-        case 10: _t->on_remove_dead_clicked(); break;
-        case 11: _t->on_toggle_light_clicked(); break;
-        case 12: _t->on_repair_equipment_clicked(); break;
-        case 13: _t->on_assign_task_clicked(); break;
-        case 14: _t->on_speed_changed((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
-        case 15: _t->on_tree_item_clicked((*reinterpret_cast<std::add_pointer_t<QTreeWidgetItem*>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[2]))); break;
-        case 16: _t->on_export_storage_clicked(); break;
+        case 5: _t->on_water_fertilize_clicked(); break;
+        case 6: _t->on_remove_bed_clicked(); break;
+        case 7: _t->on_plant_clicked(); break;
+        case 8: _t->on_water_clicked(); break;
+        case 9: _t->on_fertilize_clicked(); break;
+        case 10: _t->on_collect_to_storage_clicked(); break;
+        case 11: _t->on_remove_dead_clicked(); break;
+        case 12: _t->on_toggle_light_clicked(); break;
+        case 13: _t->on_repair_equipment_clicked(); break;
+        case 14: _t->on_assign_task_clicked(); break;
+        case 15: _t->on_speed_changed((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 16: _t->on_tree_item_clicked((*reinterpret_cast<std::add_pointer_t<QTreeWidgetItem*>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[2]))); break;
+        case 17: _t->on_export_storage_clicked(); break;
         default: ;
         }
     }
@@ -167,14 +171,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 17)
+        if (_id < 18)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 17;
+        _id -= 18;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 17)
+        if (_id < 18)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 17;
+        _id -= 18;
     }
     return _id;
 }

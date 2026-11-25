@@ -3,6 +3,7 @@
 #include <vector>
 #include "Class/Manager/File_manager/Header/Plant_type_data.h"
 #include "Class/Base/Header/Greenhouse.h"
+#include "Class/Base/Header/Human.h"
 #include "Class/Base/Header/Storage.h"
 #include "Class/Manager/Time_manager/Header/Time_manager.h"
 #include "Class/Template/Collection.h"

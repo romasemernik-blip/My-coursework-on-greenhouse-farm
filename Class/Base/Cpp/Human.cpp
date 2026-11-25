@@ -1,5 +1,5 @@
 #include "Class/Base/Header/Human.h"
-#include "Class/Exception/Header/All_exсeption.h"
+#include "Class/Exception/Header/All_exception.h"
 
 Human::Human()
     : birth_date_(0)

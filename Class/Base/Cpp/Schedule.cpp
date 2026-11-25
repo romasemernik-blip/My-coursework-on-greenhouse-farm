@@ -1,5 +1,6 @@
 #include "Class/Base/Header/Schedule.h"
 #include "Class/Exception/Header/All_exception.h"
+#include "Class/Inheritor/Operation/Header/Auto_Operation.h"
 #include <algorithm>
 
 Schedule::Schedule()

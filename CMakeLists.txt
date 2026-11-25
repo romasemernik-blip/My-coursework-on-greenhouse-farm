@@ -75,6 +75,8 @@ set(SOURCES
     Class/Manager/File_manager/Cpp/Plant_type_loader.cpp
     Class/Manager/File_manager/Cpp/Progress_saver.cpp
     Class/Manager/File_manager/Cpp/Storage_loader.cpp
+    Class/Manager/File_manager/Cpp/Equipment_loader.cpp
+    Class/Manager/File_manager/Cpp/Bed_loader.cpp
     
     # Manager / Input_manager
     Class/Manager/Input_manager/Cpp/Input_reader.cpp
@@ -84,6 +86,7 @@ set(SOURCES
     
     # UI
     Class/UI/Cpp/MainWindow.cpp
+    main.cpp
 )
 
 # Файлы заголовков

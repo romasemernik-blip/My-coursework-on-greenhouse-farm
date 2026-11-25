@@ -1,5 +1,6 @@
 #pragma once
 #include "Class/Base/Header/Human.h"
+#include "Class/Base/Header/Bed.h"
 #include "Class/Template/Collection.h"
 #include <memory>
 

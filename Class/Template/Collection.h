@@ -15,7 +15,7 @@ public:
     using iterator = typename std::vector<T>::iterator;
     using const_iterator = typename std::vector<T>::const_iterator;
 
-    Collection() = default;
+    Collection() {};
     Collection(const Collection& other) = default;
     Collection(Collection&& other) noexcept = default;
     Collection& operator=(const Collection& other) = default;

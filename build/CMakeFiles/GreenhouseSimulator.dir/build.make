@@ -487,11 +487,41 @@ CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Storage_loader
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Storage_loader.cpp.s"
 	C:/Users/Roman/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Storage_loader.cpp" -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Storage_loader.cpp.s
 
+CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/flags.make
+CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp
+CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj: C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Equipment_loader.cpp
+CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj"
+	C:/Users/Roman/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj -MF CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj.d -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj -c "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Equipment_loader.cpp"
+
+CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.i"
+	C:/Users/Roman/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Equipment_loader.cpp" > CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.i
+
+CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.s"
+	C:/Users/Roman/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Equipment_loader.cpp" -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.s
+
+CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/flags.make
+CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp
+CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj: C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Bed_loader.cpp
+CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj"
+	C:/Users/Roman/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj -MF CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj.d -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj -c "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Bed_loader.cpp"
+
+CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.i"
+	C:/Users/Roman/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Bed_loader.cpp" > CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.i
+
+CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.s"
+	C:/Users/Roman/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Bed_loader.cpp" -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.s
+
 CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/flags.make
 CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp
 CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.obj: C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Manager/Input_manager/Cpp/Input_reader.cpp
 CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.obj"
 	C:/Users/Roman/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.obj -MF CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.obj.d -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.obj -c "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/Input_manager/Cpp/Input_reader.cpp"
 
 CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.i: cmake_force
@@ -506,7 +536,7 @@ CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.c
 CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp
 CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.cpp.obj: C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Manager/Time_manager/Cpp/Time_manager.cpp
 CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.cpp.obj"
 	C:/Users/Roman/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.cpp.obj -MF CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.cpp.obj.d -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.cpp.obj -c "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/Time_manager/Cpp/Time_manager.cpp"
 
 CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.cpp.i: cmake_force
@@ -521,7 +551,7 @@ CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj: CMakeFiles/G
 CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp
 CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj: C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/UI/Cpp/MainWindow.cpp
 CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj"
 	C:/Users/Roman/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj -MF CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj.d -o CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj -c "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Cpp/MainWindow.cpp"
 
 CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.i: cmake_force
@@ -561,6 +591,8 @@ GreenhouseSimulator_OBJECTS = \
 "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Plant_type_loader.cpp.obj" \
 "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Progress_saver.cpp.obj" \
 "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Storage_loader.cpp.obj" \
+"CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj" \
+"CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj" \
 "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.obj" \
 "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.cpp.obj" \
 "CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj"
@@ -595,6 +627,8 @@ GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_m
 GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Plant_type_loader.cpp.obj
 GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Progress_saver.cpp.obj
 GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Storage_loader.cpp.obj
+GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj
+GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj
 GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.obj
 GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.cpp.obj
 GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj
@@ -604,7 +638,7 @@ GreenhouseSimulator.exe: C:/Qt/6.12.0/mingw_64/lib/libQt6Gui.a
 GreenhouseSimulator.exe: C:/Qt/6.12.0/mingw_64/lib/libQt6Core.a
 GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/linkLibs.rsp
 GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_32) "Linking CXX executable GreenhouseSimulator.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_34) "Linking CXX executable GreenhouseSimulator.exe"
 	"C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/GreenhouseSimulator.dir/objects.a
 	C:/Users/Roman/gcc/bin/ar.exe qc CMakeFiles/GreenhouseSimulator.dir/objects.a @CMakeFiles/GreenhouseSimulator.dir/objects1.rsp
 	C:/Users/Roman/gcc/bin/g++.exe -g -Wl,--whole-archive CMakeFiles/GreenhouseSimulator.dir/objects.a -Wl,--no-whole-archive -o GreenhouseSimulator.exe -Wl,--out-implib,libGreenhouseSimulator.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/GreenhouseSimulator.dir/linkLibs.rsp

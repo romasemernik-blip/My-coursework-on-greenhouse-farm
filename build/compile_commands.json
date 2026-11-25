@@ -163,6 +163,18 @@
 },
 {
   "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Equipment_loader.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Equipment_loader.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Equipment_loader.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Bed_loader.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Bed_loader.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
   "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/Input_manager/Cpp/Input_reader.cpp\"",
   "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/Input_manager/Cpp/Input_reader.cpp",
   "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Input_manager/Cpp/Input_reader.cpp.obj"
