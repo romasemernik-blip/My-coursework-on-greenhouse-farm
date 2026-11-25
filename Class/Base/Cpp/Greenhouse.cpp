@@ -177,3 +177,9 @@ void Greenhouse::set_current_energy(double value) {
         throw Invalid_argument_exception("current_energy", "must be in [0, max_energy]");
     current_energy_ = value;
 }
+
+void Greenhouse::update(double dt, bool global_light_on) {
+    for (std::size_t i = 0; i < beds_.size(); ++i) {
+        beds_[i]->update(dt, global_light_on);
+    }
+}

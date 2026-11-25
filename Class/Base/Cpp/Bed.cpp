@@ -155,3 +155,9 @@ void Bed::set_width(double value) {
         throw Invalid_argument_exception("width", "must be non-negative");
     width_ = value;
 }
+
+void Bed::update(double dt, bool is_light_on) {
+    for (std::size_t i = 0; i < plants_.size(); ++i) {
+        plants_[i]->update(dt, moisture_, soil_ph_, is_light_on);
+    }
+}

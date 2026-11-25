@@ -934,6 +934,54 @@ Class/Manager/Time_manager/Cpp/Time_manager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreenhouseSimulator.dir/build.make CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.cpp.s
 .PHONY : Class/Manager/Time_manager/Cpp/Time_manager.cpp.s
 
+Class/UI/Cpp/BedsWidget.obj: Class/UI/Cpp/BedsWidget.cpp.obj
+.PHONY : Class/UI/Cpp/BedsWidget.obj
+
+# target to build an object file
+Class/UI/Cpp/BedsWidget.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreenhouseSimulator.dir/build.make CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/BedsWidget.cpp.obj
+.PHONY : Class/UI/Cpp/BedsWidget.cpp.obj
+
+Class/UI/Cpp/BedsWidget.i: Class/UI/Cpp/BedsWidget.cpp.i
+.PHONY : Class/UI/Cpp/BedsWidget.i
+
+# target to preprocess a source file
+Class/UI/Cpp/BedsWidget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreenhouseSimulator.dir/build.make CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/BedsWidget.cpp.i
+.PHONY : Class/UI/Cpp/BedsWidget.cpp.i
+
+Class/UI/Cpp/BedsWidget.s: Class/UI/Cpp/BedsWidget.cpp.s
+.PHONY : Class/UI/Cpp/BedsWidget.s
+
+# target to generate assembly for a file
+Class/UI/Cpp/BedsWidget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreenhouseSimulator.dir/build.make CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/BedsWidget.cpp.s
+.PHONY : Class/UI/Cpp/BedsWidget.cpp.s
+
+Class/UI/Cpp/BottomPanelWidget.obj: Class/UI/Cpp/BottomPanelWidget.cpp.obj
+.PHONY : Class/UI/Cpp/BottomPanelWidget.obj
+
+# target to build an object file
+Class/UI/Cpp/BottomPanelWidget.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreenhouseSimulator.dir/build.make CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/BottomPanelWidget.cpp.obj
+.PHONY : Class/UI/Cpp/BottomPanelWidget.cpp.obj
+
+Class/UI/Cpp/BottomPanelWidget.i: Class/UI/Cpp/BottomPanelWidget.cpp.i
+.PHONY : Class/UI/Cpp/BottomPanelWidget.i
+
+# target to preprocess a source file
+Class/UI/Cpp/BottomPanelWidget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreenhouseSimulator.dir/build.make CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/BottomPanelWidget.cpp.i
+.PHONY : Class/UI/Cpp/BottomPanelWidget.cpp.i
+
+Class/UI/Cpp/BottomPanelWidget.s: Class/UI/Cpp/BottomPanelWidget.cpp.s
+.PHONY : Class/UI/Cpp/BottomPanelWidget.s
+
+# target to generate assembly for a file
+Class/UI/Cpp/BottomPanelWidget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreenhouseSimulator.dir/build.make CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/BottomPanelWidget.cpp.s
+.PHONY : Class/UI/Cpp/BottomPanelWidget.cpp.s
+
 Class/UI/Cpp/MainWindow.obj: Class/UI/Cpp/MainWindow.cpp.obj
 .PHONY : Class/UI/Cpp/MainWindow.obj
 
@@ -1113,6 +1161,12 @@ help:
 	@echo "... Class/Manager/Time_manager/Cpp/Time_manager.obj"
 	@echo "... Class/Manager/Time_manager/Cpp/Time_manager.i"
 	@echo "... Class/Manager/Time_manager/Cpp/Time_manager.s"
+	@echo "... Class/UI/Cpp/BedsWidget.obj"
+	@echo "... Class/UI/Cpp/BedsWidget.i"
+	@echo "... Class/UI/Cpp/BedsWidget.s"
+	@echo "... Class/UI/Cpp/BottomPanelWidget.obj"
+	@echo "... Class/UI/Cpp/BottomPanelWidget.i"
+	@echo "... Class/UI/Cpp/BottomPanelWidget.s"
 	@echo "... Class/UI/Cpp/MainWindow.obj"
 	@echo "... Class/UI/Cpp/MainWindow.i"
 	@echo "... Class/UI/Cpp/MainWindow.s"

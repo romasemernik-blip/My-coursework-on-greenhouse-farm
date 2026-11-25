@@ -585,6 +585,21 @@ CMakeFiles/GreenhouseSimulator.dir/Class/Logger/Cpp/Action_logger.cpp.s: cmake_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GreenhouseSimulator.dir/Class/Logger/Cpp/Action_logger.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Roman\Desktop\course POTHL\codeofcourse\Class\Logger\Cpp\Action_logger.cpp" -o CMakeFiles\GreenhouseSimulator.dir\Class\Logger\Cpp\Action_logger.cpp.s
 
+CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/flags.make
+CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp
+CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.obj: C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Cpp/Weather.cpp
+CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.obj: CMakeFiles/GreenhouseSimulator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Roman\Desktop\course POTHL\codeofcourse\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.obj -MF CMakeFiles\GreenhouseSimulator.dir\Class\Base\Cpp\Weather.cpp.obj.d -o CMakeFiles\GreenhouseSimulator.dir\Class\Base\Cpp\Weather.cpp.obj -c "C:\Users\Roman\Desktop\course POTHL\codeofcourse\Class\Base\Cpp\Weather.cpp"
+
+CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Roman\Desktop\course POTHL\codeofcourse\Class\Base\Cpp\Weather.cpp" > CMakeFiles\GreenhouseSimulator.dir\Class\Base\Cpp\Weather.cpp.i
+
+CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Roman\Desktop\course POTHL\codeofcourse\Class\Base\Cpp\Weather.cpp" -o CMakeFiles\GreenhouseSimulator.dir\Class\Base\Cpp\Weather.cpp.s
+
 # Object files for target GreenhouseSimulator
 GreenhouseSimulator_OBJECTS = \
 "CMakeFiles/GreenhouseSimulator.dir/GreenhouseSimulator_autogen/mocs_compilation.cpp.obj" \
@@ -620,7 +635,8 @@ GreenhouseSimulator_OBJECTS = \
 "CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_manager/Cpp/Time_manager.cpp.obj" \
 "CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj" \
 "CMakeFiles/GreenhouseSimulator.dir/Class/Logger/Cpp/System_logger.cpp.obj" \
-"CMakeFiles/GreenhouseSimulator.dir/Class/Logger/Cpp/Action_logger.cpp.obj"
+"CMakeFiles/GreenhouseSimulator.dir/Class/Logger/Cpp/Action_logger.cpp.obj" \
+"CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.obj"
 
 # External object files for target GreenhouseSimulator
 GreenhouseSimulator_EXTERNAL_OBJECTS =
@@ -659,6 +675,7 @@ GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/Class/Manager/Time_m
 GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/MainWindow.cpp.obj
 GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/Class/Logger/Cpp/System_logger.cpp.obj
 GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/Class/Logger/Cpp/Action_logger.cpp.obj
+GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.obj
 GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/build.make
 GreenhouseSimulator.exe: C:/Qt/6.12.0/mingw_64/lib/libQt6Widgets.a
 GreenhouseSimulator.exe: C:/Qt/6.12.0/mingw_64/lib/libQt6Gui.a
@@ -666,7 +683,7 @@ GreenhouseSimulator.exe: C:/Qt/6.12.0/mingw_64/lib/libQt6Core.a
 GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/linkLibs.rsp
 GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/objects1.rsp
 GreenhouseSimulator.exe: CMakeFiles/GreenhouseSimulator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Roman\Desktop\course POTHL\codeofcourse\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_36) "Linking CXX executable GreenhouseSimulator.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Roman\Desktop\course POTHL\codeofcourse\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_37) "Linking CXX executable GreenhouseSimulator.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\GreenhouseSimulator.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

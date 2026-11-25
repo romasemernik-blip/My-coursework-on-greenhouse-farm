@@ -476,6 +476,7 @@ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Plant.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Schedule.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Storage.h \
+  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Weather.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Exception/Header/All_exception.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Exception/Header/Bed_not_found_exception.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Exception/Header/Equipment_failure_exception.h \
@@ -490,6 +491,10 @@ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Exception/Header/Sensor_read_exception.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Exception/Header/Storage_overflow_exception.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Human/Header/Operator.h \
+  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Weather/Header/Clear.h \
+  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Weather/Header/Rain.h \
+  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Weather/Header/Snow.h \
+  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Weather/Header/Storm.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Logger/Header/Action_logger.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Logger/Header/System_logger.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Manager/File_manager/Header/File_manager.h \

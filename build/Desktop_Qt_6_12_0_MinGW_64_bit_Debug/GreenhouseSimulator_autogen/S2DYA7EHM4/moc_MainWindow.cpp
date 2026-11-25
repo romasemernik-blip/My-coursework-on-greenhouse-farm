@@ -58,6 +58,7 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         "QTreeWidgetItem*",
         "item",
         "column",
+        "on_toggle_bed_light_clicked",
         "on_toggle_light_clicked",
         "on_repair_equipment_clicked",
         "on_export_storage_clicked"
@@ -94,12 +95,14 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         QtMocHelpers::SlotData<void(QTreeWidgetItem *, int)>(15, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { 0x80000000 | 16, 17 }, { QMetaType::Int, 18 },
         }}),
-        // Slot 'on_toggle_light_clicked'
+        // Slot 'on_toggle_bed_light_clicked'
         QtMocHelpers::SlotData<void()>(19, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_repair_equipment_clicked'
+        // Slot 'on_toggle_light_clicked'
         QtMocHelpers::SlotData<void()>(20, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_export_storage_clicked'
+        // Slot 'on_repair_equipment_clicked'
         QtMocHelpers::SlotData<void()>(21, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_export_storage_clicked'
+        QtMocHelpers::SlotData<void()>(22, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -136,9 +139,10 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 10: _t->on_fertilize_clicked(); break;
         case 11: _t->on_remove_dead_clicked(); break;
         case 12: _t->on_tree_item_clicked((*reinterpret_cast<std::add_pointer_t<QTreeWidgetItem*>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[2]))); break;
-        case 13: _t->on_toggle_light_clicked(); break;
-        case 14: _t->on_repair_equipment_clicked(); break;
-        case 15: _t->on_export_storage_clicked(); break;
+        case 13: _t->on_toggle_bed_light_clicked(); break;
+        case 14: _t->on_toggle_light_clicked(); break;
+        case 15: _t->on_repair_equipment_clicked(); break;
+        case 16: _t->on_export_storage_clicked(); break;
         default: ;
         }
     }
@@ -163,14 +167,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 16)
+        if (_id < 17)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 16;
+        _id -= 17;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 16)
+        if (_id < 17)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 16;
+        _id -= 17;
     }
     return _id;
 }

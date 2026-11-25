@@ -2,7 +2,6 @@
 #include "Class/Manager/File_manager/Header/Storage_loader.h"
 #include "Class/Exception/Header/All_exception.h"
 #include "Class/Inheritor/Inheritor2/Permanent_Equipment/Header/Lighting.h"
-#include "Class/Inheritor/Human/Header/Agronomist.h"
 
 #include <QVBoxLayout>
 #include <QHBoxLayout>
@@ -21,7 +20,10 @@
 #include <cmath>
 #include <QDateTime>
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), current_selected_bed_(nullptr), current_operator_(nullptr) {
+// ==========================================
+// КОНСТРУКТОР И ДЕСТРУКТОР
+// ==========================================
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), current_selected_bed_(nullptr) {
     setWindowTitle("Greenhouse Simulator - Управление");
     resize(1300, 850);
 
@@ -30,22 +32,27 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), current_selected_
     act_log_ = std::make_unique<Action_logger>("actions_log.txt");
     sys_log_->log("=== ЗАПУСК ПРОГРАММЫ ===");
 
-    // 2. Создание интерфейса
+    // 2. Инициализация погоды и переменных
+    current_weather_ = std::make_unique<Clear>();
+    weather_timer_ = 0.0;
+    is_bed_light_on_ = false;
+
+    // 3. Создание интерфейса
     setup_ui();
 
-    // 3. Требование выбрать оператора при старте
+    // 4. Выбор оператора при старте
     if (!select_operator_dialog(true)) {
         sys_log_->log("Оператор не выбран при старте. Выход.");
-        QTimer::singleShot(0, this, &QWidget::close); // Закрываем окно
+        QTimer::singleShot(0, this, &QWidget::close);
         return;
     }
 
-    // 4. Запуск таймера игры
+    // 5. Запуск игрового таймера
     game_timer_ = new QTimer(this);
     connect(game_timer_, &QTimer::timeout, this, &MainWindow::on_game_tick);
     game_timer_->start(1000);
 
-    // 5. Автоматическая загрузка данных
+    // 6. Автоматическая загрузка данных
     QTimer::singleShot(100, this, &MainWindow::on_load_all_clicked);
 }
 
@@ -60,7 +67,7 @@ void MainWindow::closeEvent(QCloseEvent *event) {
 }
 
 // ==========================================
-// ИНТЕРФЕЙС (SETUP UI)
+// ИНТЕРФЕЙС
 // ==========================================
 void MainWindow::setup_ui() {
     QSplitter* main_splitter = new QSplitter(Qt::Horizontal, this);
@@ -69,7 +76,6 @@ void MainWindow::setup_ui() {
     QWidget* left_panel = new QWidget(this);
     QVBoxLayout* left_layout = new QVBoxLayout(left_panel);
 
-    // Кнопки управления файлами
     QPushButton* btn_load_all = new QPushButton("Загрузить все данные", this);
     QPushButton* btn_save_all = new QPushButton("Сохранить все данные", this);
     connect(btn_load_all, &QPushButton::clicked, this, &MainWindow::on_load_all_clicked);
@@ -77,7 +83,6 @@ void MainWindow::setup_ui() {
     left_layout->addWidget(btn_load_all);
     left_layout->addWidget(btn_save_all);
 
-    // Информация о текущем операторе
     operator_label_ = new QLabel("Текущий оператор: Не выбран", this);
     operator_label_->setStyleSheet("font-weight: bold; color: #2c3e50;");
     QPushButton* btn_switch_operator = new QPushButton("Сменить оператора", this);
@@ -85,19 +90,17 @@ void MainWindow::setup_ui() {
     left_layout->addWidget(operator_label_);
     left_layout->addWidget(btn_switch_operator);
 
-    // Дерево структуры
     tree_widget_ = new QTreeWidget(this);
     tree_widget_->setHeaderLabel("Структура теплицы");
     connect(tree_widget_, &QTreeWidget::itemClicked, this, &MainWindow::on_tree_item_clicked);
     left_layout->addWidget(tree_widget_);
 
-    // --- ПРАВАЯ ПАНЕЛЬ (ВКЛАДКИ) ---
+    // --- ПРАВАЯ ПАНЕЛЬ ---
     QTabWidget* tab_widget = new QTabWidget(this);
 
     // Вкладка 1: Грядки
     QWidget* beds_tab = new QWidget();
     QVBoxLayout* beds_layout = new QVBoxLayout(beds_tab);
-    
     bed_info_label_ = new QLabel("Выберите грядку для управления", this);
     bed_info_label_->setStyleSheet("font-weight: bold; font-size: 14px; margin-bottom: 5px;");
     beds_layout->addWidget(bed_info_label_);
@@ -108,12 +111,13 @@ void MainWindow::setup_ui() {
     beds_layout->addWidget(grid_widget_);
 
     QHBoxLayout* action_layout = new QHBoxLayout();
-    QPushButton* btn_add_bed = new QPushButton("Добавить грядку", this);
-    QPushButton* btn_remove_bed = new QPushButton("Удалить грядку", this);
+    QPushButton* btn_add_bed = new QPushButton("Добавить", this);
+    QPushButton* btn_remove_bed = new QPushButton("Удалить", this);
     QPushButton* btn_plant = new QPushButton("Посадить", this);
-    QPushButton* btn_collect = new QPushButton("Собрать урожай", this);
+    QPushButton* btn_collect = new QPushButton("Собрать", this);
     QPushButton* btn_water = new QPushButton("Полить", this);
     QPushButton* btn_fert = new QPushButton("Удобрить", this);
+    QPushButton* btn_light = new QPushButton("Свет (грядка)", this);
     QPushButton* btn_remove_dead = new QPushButton("Убрать мертвые", this);
     
     connect(btn_add_bed, &QPushButton::clicked, this, &MainWindow::on_add_bed_clicked);
@@ -122,6 +126,7 @@ void MainWindow::setup_ui() {
     connect(btn_collect, &QPushButton::clicked, this, &MainWindow::on_collect_to_storage_clicked);
     connect(btn_water, &QPushButton::clicked, this, &MainWindow::on_water_clicked);
     connect(btn_fert, &QPushButton::clicked, this, &MainWindow::on_fertilize_clicked);
+    connect(btn_light, &QPushButton::clicked, this, &MainWindow::on_toggle_bed_light_clicked);
     connect(btn_remove_dead, &QPushButton::clicked, this, &MainWindow::on_remove_dead_clicked);
 
     action_layout->addWidget(btn_add_bed);
@@ -130,6 +135,7 @@ void MainWindow::setup_ui() {
     action_layout->addWidget(btn_collect);
     action_layout->addWidget(btn_water);
     action_layout->addWidget(btn_fert);
+    action_layout->addWidget(btn_light);
     action_layout->addWidget(btn_remove_dead);
     beds_layout->addLayout(action_layout);
     tab_widget->addTab(beds_tab, "Грядки");
@@ -151,8 +157,8 @@ void MainWindow::setup_ui() {
     QVBoxLayout* equip_layout = new QVBoxLayout(equip_tab);
     equipment_list_widget_ = new QListWidget(this);
     QHBoxLayout* equip_btn_layout = new QHBoxLayout();
-    QPushButton* btn_toggle_light = new QPushButton("Вкл/Выкл Свет", this);
-    QPushButton* btn_repair = new QPushButton("Починить оборудование", this);
+    QPushButton* btn_toggle_light = new QPushButton("Вкл/Выкл Свет (общий)", this);
+    QPushButton* btn_repair = new QPushButton("Починить все", this);
     connect(btn_toggle_light, &QPushButton::clicked, this, &MainWindow::on_toggle_light_clicked);
     connect(btn_repair, &QPushButton::clicked, this, &MainWindow::on_repair_equipment_clicked);
     equip_btn_layout->addWidget(btn_toggle_light);
@@ -166,19 +172,24 @@ void MainWindow::setup_ui() {
     QVBoxLayout* bottom_layout = new QVBoxLayout(bottom_panel);
     QHBoxLayout* time_layout = new QHBoxLayout();
     
-    speed_label_ = new QLabel("Скорость: x1", this);
+    weather_label_ = new QLabel("Погода: Ясно", this);
+    weather_label_->setStyleSheet("color: #e67e22; font-weight: bold;");
     time_label_ = new QLabel("Время: День 1 | 00:00", this);
     time_label_->setStyleSheet("font-weight: bold;");
+    speed_label_ = new QLabel("Скорость: x1", this);
     
-    QComboBox* speed_combo = new QComboBox(this);
-    speed_combo->addItem("x1", 1.0);
-    speed_combo->addItem("x5", 5.0);
-    speed_combo->addItem("x10", 10.0);
-    connect(speed_combo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &MainWindow::on_speed_changed);
+    speed_combo_ = new QComboBox(this);
+    speed_combo_->addItem("x1", 1.0);
+    speed_combo_->addItem("x10", 10.0);
+    speed_combo_->addItem("x50", 50.0);
+    speed_combo_->addItem("x100", 100.0);
+    speed_combo_->addItem("x200", 200.0);
+    connect(speed_combo_, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &MainWindow::on_speed_changed);
     
+    time_layout->addWidget(weather_label_);
     time_layout->addWidget(time_label_);
     time_layout->addWidget(speed_label_);
-    time_layout->addWidget(speed_combo);
+    time_layout->addWidget(speed_combo_);
     time_layout->addStretch();
     bottom_layout->addLayout(time_layout);
 
@@ -186,7 +197,6 @@ void MainWindow::setup_ui() {
     log_widget_->setReadOnly(true);
     bottom_layout->addWidget(log_widget_);
 
-    // Сборка панелей
     QSplitter* right_splitter = new QSplitter(Qt::Vertical, this);
     right_splitter->addWidget(tab_widget);
     right_splitter->addWidget(bottom_panel);
@@ -196,14 +206,88 @@ void MainWindow::setup_ui() {
 }
 
 // ==========================================
-// ЛОГИКА ОПЕРАТОРА И АГРОНОМА
+// ИГРОВОЙ ЦИКЛ И ПОГОДА
 // ==========================================
+void MainWindow::on_game_tick() {
+    time_manager_.tick(1.0);
+    
+    // Смена погоды каждые 24 часа
+    weather_timer_ += time_manager_.get_speed_multiplier();
+    if (weather_timer_ >= 24.0) {
+        weather_timer_ = 0.0;
+        int r = rand() % 4;
+        if (r == 0) current_weather_ = std::make_unique<Clear>();
+        else if (r == 1) current_weather_ = std::make_unique<Rain>();
+        else if (r == 2) current_weather_ = std::make_unique<Storm>();
+        else current_weather_ = std::make_unique<Snow>();
+        
+        log("Погода изменилась на: " + QString::fromStdString(current_weather_->get_name()));
+    }
 
+    // Влияние на выбранную грядку
+    if (current_selected_bed_) {
+        apply_weather_effects(time_manager_.get_speed_multiplier());
+    }
+
+    check_harvest_time();
+    
+    time_label_->setText(QString::fromStdString(time_manager_.get_formatted_time()));
+    weather_label_->setText("Погода: " + QString::fromStdString(current_weather_->get_name()));
+    if (current_selected_bed_) refresh_bed_view();
+}
+
+void MainWindow::apply_weather_effects(double dt) {
+    try {
+        // Влажность
+        double moist_change = current_weather_->get_moisture_effect() * dt;
+        double new_moisture = current_selected_bed_->get_moisture() + moist_change;
+        if (new_moisture > 100.0) new_moisture = 100.0;
+        if (new_moisture < 0.0) new_moisture = 0.0;
+        current_selected_bed_->set_moisture(new_moisture);
+
+        // pH
+        double ph_change = current_weather_->get_ph_effect() * dt;
+        double new_ph = current_selected_bed_->get_soil_ph() + ph_change;
+        if (new_ph > 14.0) new_ph = 14.0;
+        if (new_ph < 0.0) new_ph = 0.0;
+        current_selected_bed_->set_soil_ph(new_ph);
+
+        // Урон при засухе
+        if (new_moisture < 10.0) {
+            for (std::size_t i = 0; i < current_selected_bed_->get_plant_count(); ++i) {
+                current_selected_bed_->get_plant(i)->damage(0.5 * dt);
+            }
+        }
+    } catch (...) {}
+}
+
+void MainWindow::check_harvest_time() {
+    double current_time = time_manager_.get_total_hours();
+    for (auto it = harvest_times_.begin(); it != harvest_times_.end(); ++it) {
+        Plant* plant = it.key();
+        if (current_time >= it.value() && plant->get_stage() != Growth_stage::Fruiting) {
+            plant->set_stage(Growth_stage::Fruiting);
+            log(QString("Растение %1 созрело!").arg(QString::fromStdString(plant->get_type())));
+            if (sys_log_) sys_log_->log("Растение " + plant->get_type() + " созрело.");
+        }
+    }
+}
+
+void MainWindow::on_speed_changed(int index) {
+    double speeds[] = {1.0, 10.0, 50.0, 100.0, 200.0};
+    if (index >= 0 && index < 5) {
+        time_manager_.set_speed_multiplier(speeds[index]);
+        speed_label_->setText(QString("Скорость: x%1").arg(speeds[index]));
+    }
+}
+
+// ==========================================
+// ВЫБОР ОПЕРАТОРА И АГРОНОМА
+// ==========================================
 bool MainWindow::select_operator_dialog(bool is_startup) {
     QString title = is_startup ? "Регистрация на смену" : "Смена оператора";
     QString prompt = is_startup ? "Выберите оператора для начала работы:" : "Выберите нового оператора:";
     
-    // Временный список (в идеале нужно брать из File_manager)
     QStringList operators = {"Иван (Оператор)", "Петр (Оператор)", "Анна (Оператор)"};
     
     bool ok;
@@ -240,22 +324,16 @@ bool MainWindow::assign_agronomist_dialog() {
 // ==========================================
 // ДЕЙСТВИЯ С ГРЯДКАМИ
 // ==========================================
-
 void MainWindow::on_add_bed_clicked() {
     try {
         auto new_bed = std::make_unique<Bed>(1, 1, 5.0, 2.0);
         greenhouse_.add_bed(std::move(new_bed));
-        
         log("Грядка добавлена.");
         if (act_log_) act_log_->log_action("Оператор", current_operator_name_.toStdString(), "Добавил грядку");
-        if (sys_log_) sys_log_->log("Успешно добавлена грядка.");
-        
         refresh_all_views();
     } catch (const Greenhouse_full_exception& e) {
-        if (sys_log_) sys_log_->log("ОШИБКА при добавлении грядки: " + std::string(e.what()));
         handle_exception(e, "Добавление грядки (нет места)");
     } catch (const std::exception& e) {
-        if (sys_log_) sys_log_->log("ОШИБКА: " + std::string(e.what()));
         handle_exception(e, "Добавление грядки");
     }
 }
@@ -268,7 +346,10 @@ void MainWindow::on_plant_clicked() {
     if (!assign_agronomist_dialog()) return;
 
     const auto& types = file_manager_.get_plant_types();
-    if (types.empty()) return;
+    if (types.empty()) {
+        QMessageBox::warning(this, "Нет данных", "Загрузите типы растений!");
+        return;
+    }
 
     QStringList items;
     for (const auto& t : types) items << QString::fromStdString(t.get_type_name());
@@ -285,18 +366,17 @@ void MainWindow::on_plant_clicked() {
                 for (int i = 0; i < count; ++i) {
                     auto plant = std::make_unique<Plant>("id_" + std::to_string(rand()), t.get_type_name(), 1.0, 
                         t.get_water_requirement(), t.get_optimal_temperature(), t.get_optimal_humidity());
-                    
                     Plant* raw = plant.get();
                     current_selected_bed_->add_plant(std::move(plant)); 
                     
                     double growth_hours = 24.0 / t.get_growth_speed();
+                    if (is_bed_light_on_) growth_hours /= 1.5;
                     harvest_times_[raw] = time_manager_.get_total_hours() + growth_hours;
                 }
                 log(QString("Посажено %1 растений %2.").arg(count).arg(selected_type));
                 if (act_log_) act_log_->log_action("Агроном", "Выбранный", "Посадил " + std::to_string(count) + " шт. " + selected_type.toStdString());
                 refresh_all_views();
             } catch (const std::exception& e) {
-                if (sys_log_) sys_log_->log("ОШИБКА при посадке: " + std::string(e.what()));
                 handle_exception(e, "Посадка растений");
             }
             break;
@@ -307,12 +387,11 @@ void MainWindow::on_plant_clicked() {
 void MainWindow::on_water_clicked() {
     if (!current_selected_bed_) return;
     try {
-        current_selected_bed_->set_moisture(current_selected_bed_->get_moisture() + 10.0);
+        current_selected_bed_->set_moisture(current_selected_bed_->get_moisture() + 15.0);
         log("Грядка полита.");
         if (act_log_) act_log_->log_action("Оператор", current_operator_name_.toStdString(), "Полил грядку");
         refresh_bed_view();
     } catch (const Invalid_argument_exception& e) {
-        if (sys_log_) sys_log_->log("ОШИБКА при поливе: " + std::string(e.what()));
         handle_exception(e, "Полив (влажность > 100%)");
     }
 }
@@ -320,16 +399,23 @@ void MainWindow::on_water_clicked() {
 void MainWindow::on_fertilize_clicked() {
     if (!current_selected_bed_) return;
     if (!assign_agronomist_dialog()) return;
-
     try {
         current_selected_bed_->set_soil_ph(current_selected_bed_->get_soil_ph() + 0.5);
         log("Грядка удобрена.");
         if (act_log_) act_log_->log_action("Агроном", "Выбранный", "Удобрил грядку");
         refresh_bed_view();
     } catch (const Invalid_argument_exception& e) {
-        if (sys_log_) sys_log_->log("ОШИБКА при удобрении: " + std::string(e.what()));
         handle_exception(e, "Удобрение (pH вышел за пределы)");
     }
+}
+
+void MainWindow::on_toggle_bed_light_clicked() {
+    if (!current_selected_bed_) return;
+    is_bed_light_on_ = !is_bed_light_on_;
+    log(QString("Свет на грядке: %1").arg(is_bed_light_on_ ? "ВКЛ" : "ВЫКЛ"));
+    if (act_log_) act_log_->log_action("Оператор", current_operator_name_.toStdString(), 
+        is_bed_light_on_ ? "Включил свет на грядке" : "Выключил свет на грядке");
+    refresh_bed_view();
 }
 
 void MainWindow::on_collect_to_storage_clicked() {
@@ -339,35 +425,26 @@ void MainWindow::on_collect_to_storage_clicked() {
     try {
         double total_amount = 0.0;
         std::vector<std::size_t> mature_indices;
-
         for (std::size_t i = 0; i < current_selected_bed_->get_plant_count(); ++i) {
             if (current_selected_bed_->get_plant(i)->get_is_mature()) {
-                total_amount += 1.5; 
+                total_amount += 1.5;
                 mature_indices.push_back(i);
             }
         }
-
         if (mature_indices.empty()) {
             log("Нет созревших растений.");
             return;
         }
 
         storage_.add("Harvest", total_amount);
-
         for (auto it = mature_indices.rbegin(); it != mature_indices.rend(); ++it) {
-            Plant* p = current_selected_bed_->get_plant(*it);
-            harvest_times_.remove(p);
+            harvest_times_.remove(current_selected_bed_->get_plant(*it));
             current_selected_bed_->remove_plant(*it);
         }
-
-        log(QString("Собрано %1 растений на склад.").arg(mature_indices.size()));
-        if (act_log_) act_log_->log_action("Агроном", "Выбранный", "Собрал " + std::to_string(mature_indices.size()) + " растений");
+        log("Урожай собран.");
         refresh_all_views();
     } catch (const Storage_overflow_exception& e) {
-        if (sys_log_) sys_log_->log("ОШИБКА при сборе: Склад переполнен.");
-        handle_exception(e, "Сбор урожая (склад переполнен). Данные сохранены.");
-    } catch (const std::exception& e) {
-        handle_exception(e, "Сбор урожая");
+        handle_exception(e, "Сбор урожая (склад переполнен)");
     }
 }
 
@@ -397,9 +474,8 @@ void MainWindow::on_remove_bed_clicked() {
 }
 
 // ==========================================
-// ОБОРУДОВАНИЕ И СИСТЕМА
+// ОБОРУДОВАНИЕ
 // ==========================================
-
 void MainWindow::on_toggle_light_clicked() {
     for (std::size_t i = 0; i < greenhouse_.get_equipment_count(); ++i) {
         Equipment* eq = greenhouse_.get_equipment(i);
@@ -422,32 +498,18 @@ void MainWindow::on_repair_equipment_clicked() {
     if (act_log_) act_log_->log_action("Оператор", current_operator_name_.toStdString(), "Починил оборудование");
 }
 
-void MainWindow::on_export_storage_clicked() {
-    try {
-        QString file = QFileDialog::getSaveFileName(this, "Экспорт", "storage.txt", "Text (*.txt)");
-        if (!file.isEmpty()) {
-            Storage_loader::save_to_file(file.toStdString(), storage_);
-            log("Склад экспортирован.");
-            if (sys_log_) sys_log_->log("Экспорт склада в " + file.toStdString());
-        }
-    } catch (const std::exception& e) {
-        handle_exception(e, "Экспорт склада");
-    }
-}
-
+// ==========================================
+// ФАЙЛЫ
+// ==========================================
 void MainWindow::on_load_all_clicked() {
     QString dir = QFileDialog::getExistingDirectory(this, "Папка с сохранением");
     if (dir.isEmpty()) return;
-    
-    if (sys_log_) sys_log_->log("Попытка загрузки данных из " + dir.toStdString());
-    
+    if (sys_log_) sys_log_->log("Загрузка данных из " + dir.toStdString());
     try {
         file_manager_.load_all(dir.toStdString(), greenhouse_, storage_, time_manager_);
         log("Данные загружены.");
-        if (sys_log_) sys_log_->log("Данные успешно загружены.");
         refresh_all_views();
     } catch (const std::exception& e) {
-        if (sys_log_) sys_log_->log("ОШИБКА загрузки: " + std::string(e.what()));
         handle_exception(e, "Загрузка данных");
     }
 }
@@ -457,22 +519,109 @@ void MainWindow::on_save_all_clicked() {
         current_save_folder_ = QFileDialog::getExistingDirectory(this, "Папка для сохранения");
     }
     if (current_save_folder_.isEmpty()) return;
-    
     if (sys_log_) sys_log_->log("Сохранение данных в " + current_save_folder_.toStdString());
-    
     try {
         file_manager_.save_all(current_save_folder_.toStdString(), greenhouse_, storage_, time_manager_);
         log("Данные сохранены.");
-        if (sys_log_) sys_log_->log("Данные успешно сохранены.");
     } catch (const std::exception& e) {
-        if (sys_log_) sys_log_->log("ОШИБКА сохранения: " + std::string(e.what()));
         handle_exception(e, "Сохранение данных");
     }
 }
 
+void MainWindow::on_export_storage_clicked() {
+    try {
+        QString file = QFileDialog::getSaveFileName(this, "Экспорт", "storage.txt", "Text (*.txt)");
+        if (!file.isEmpty()) {
+            Storage_loader::save_to_file(file.toStdString(), storage_);
+            log("Склад экспортирован.");
+        }
+    } catch (const std::exception& e) {
+        handle_exception(e, "Экспорт склада");
+    }
+}
+
 // ==========================================
-// ОБНОВЛЕНИЕ ИНТЕРФЕЙСА (REFRESH)
+// ОБНОВЛЕНИЕ ИНТЕРФЕЙСА
 // ==========================================
+void MainWindow::refresh_bed_view() {
+    // Очищаем сетку
+    QLayoutItem* child;
+    while ((child = grid_layout_->takeAt(0)) != nullptr) {
+        delete child->widget(); delete child;
+    }
+    if (!current_selected_bed_) {
+        bed_info_label_->setText("Выберите грядку.");
+        return;
+    }
+
+    // Тултип для самой грядки
+    QString bed_tooltip = QString("Влажность: %1%\npH: %2\nПогода: %3\nСвет: %4")
+        .arg(current_selected_bed_->get_moisture()).arg(current_selected_bed_->get_soil_ph())
+        .arg(QString::fromStdString(current_weather_->get_name()))
+        .arg(is_bed_light_on_ ? "ВКЛ" : "ВЫКЛ");
+    
+    bed_info_label_->setText(QString("Грядка | Влажность: %1% | pH: %2")
+        .arg(current_selected_bed_->get_moisture()).arg(current_selected_bed_->get_soil_ph()));
+    bed_info_label_->setToolTip(bed_tooltip);
+
+    int row = 0, col = 0;
+    for (std::size_t i = 0; i < current_selected_bed_->get_plant_count(); ++i) {
+        Plant* p = current_selected_bed_->get_plant(i);
+        QLabel* label = new QLabel(this);
+        label->setFixedSize(40, 40);
+        
+        QString tooltip = QString("Тип: %1\nЗдоровье: %2%\nСтадия: %3")
+            .arg(QString::fromStdString(p->get_type())).arg(p->get_current_health())
+            .arg(QString::fromStdString(growth_stage_to_string(p->get_stage())));
+
+        if (p->get_is_mature()) {
+            label->setStyleSheet("background-color: #ffeb3b; border: 1px solid #fbc02d;");
+            tooltip += "\nГОТОВО К СБОРУ!";
+        } else if (p->get_is_dead()) {
+            label->setStyleSheet("background-color: #555; border: 1px solid #000;");
+            tooltip += "\nРАСТЕНИЕ МЕРТВО";
+        } else {
+            label->setStyleSheet(is_bed_light_on_ ? "background-color: #8bc34a; border: 1px solid #558b2f;" : "background-color: #4caf50; border: 1px solid #388e3c;");
+            
+            // --- РАСЧЕТ ВРЕМЕНИ ДО СОЗРЕВАНИЯ ---
+            if (harvest_times_.contains(p)) {
+                // Получаем текущее игровое время в часах
+                double current_time = time_manager_.get_total_hours();
+                double harvest_time = harvest_times_[p];
+                double time_left = harvest_time - current_time;
+
+                // Если свет включен, применяем бонус (ускоряем время в 1.5 раза)
+                if (is_bed_light_on_ && time_left > 0) {
+                    // Коэффициент 1.5 означает, что время "идет" быстрее, 
+                    // но для отображения это значит, что оставшееся время делится на 1.5
+                    time_left /= 1.5;
+                }
+
+                if (time_left > 0) {
+                    // Переводим в дни и часы
+                    int days = static_cast<int>(time_left / 24.0);
+                    int hours = static_cast<int>(std::fmod(time_left, 24.0));
+                    int minutes = static_cast<int>((std::fmod(time_left, 1.0)) * 60);
+
+                    if (days > 0) {
+                        tooltip += QString("\nДо сбора: %1 д. %2 ч.").arg(days).arg(hours);
+                    } else if (hours > 0) {
+                        tooltip += QString("\nДо сбора: %1 ч. %2 мин.").arg(hours).arg(minutes);
+                    } else {
+                        tooltip += QString("\nДо сбора: %1 мин.").arg(minutes);
+                    }
+                } else {
+                    tooltip += "\nДолжно было созреть...";
+                }
+            } else {
+                tooltip += "\nВремя не рассчитано";
+            }
+        }
+        label->setToolTip(tooltip);
+        grid_layout_->addWidget(label, row, col);
+        if (++col >= 8) { col = 0; row++; }
+    }
+}
 
 void MainWindow::refresh_tree() {
     tree_widget_->clear();
@@ -489,43 +638,6 @@ void MainWindow::refresh_tree() {
         }
     }
     tree_widget_->expandAll();
-}
-
-void MainWindow::refresh_bed_view() {
-    QLayoutItem* child;
-    while ((child = grid_layout_->takeAt(0)) != nullptr) {
-        delete child->widget(); delete child;
-    }
-    if (!current_selected_bed_) {
-        bed_info_label_->setText("Выберите грядку.");
-        return;
-    }
-    bed_info_label_->setText(QString("Грядка | Влажность: %1% | pH: %2")
-        .arg(current_selected_bed_->get_moisture()).arg(current_selected_bed_->get_soil_ph()));
-
-    int row = 0, col = 0;
-    for (std::size_t i = 0; i < current_selected_bed_->get_plant_count(); ++i) {
-        Plant* p = current_selected_bed_->get_plant(i);
-        QLabel* label = new QLabel(this);
-        label->setFixedSize(40, 40);
-        
-        QString tooltip = QString::fromStdString(p->get_type());
-        if (p->get_is_mature()) {
-            label->setStyleSheet("background-color: #ffeb3b; border: 1px solid #fbc02d;");
-            tooltip += "\nГОТОВО К СБОРУ!";
-        } else if (p->get_is_dead()) {
-            label->setStyleSheet("background-color: #555; border: 1px solid #000;");
-        } else {
-            label->setStyleSheet("background-color: #4caf50; border: 1px solid #388e3c;");
-            if (harvest_times_.contains(p)) {
-                double left = harvest_times_[p] - time_manager_.get_total_hours();
-                tooltip += QString("\nДо сбора: %1 ч.").arg(QString::number(left, 'f', 1));
-            }
-        }
-        label->setToolTip(tooltip);
-        grid_layout_->addWidget(label, row, col);
-        if (++col >= 8) { col = 0; row++; }
-    }
 }
 
 void MainWindow::refresh_storage_view() {
@@ -563,38 +675,6 @@ void MainWindow::on_tree_item_clicked(QTreeWidgetItem *item, int column) {
     if (data.isValid()) {
         current_selected_bed_ = greenhouse_.get_bed(data.toInt());
         refresh_bed_view();
-    }
-}
-
-// ==========================================
-// ИГРОВОЙ ЦИКЛ И ОШИБКИ
-// ==========================================
-
-void MainWindow::on_game_tick() {
-    time_manager_.tick(1.0);
-    time_label_->setText(QString::fromStdString(time_manager_.get_formatted_time()));
-    check_harvest_time();
-    if (current_selected_bed_) refresh_bed_view();
-}
-
-void MainWindow::check_harvest_time() {
-    double current_time = time_manager_.get_total_hours();
-    for (auto it = harvest_times_.begin(); it != harvest_times_.end(); ++it) {
-        Plant* plant = it.key();
-        if (current_time >= it.value() && plant->get_stage() != Growth_stage::Fruiting) {
-            plant->set_stage(Growth_stage::Fruiting);
-            log(QString("Растение %1 созрело!").arg(QString::fromStdString(plant->get_type())));
-            if (sys_log_) sys_log_->log("Растение " + plant->get_type() + " созрело.");
-        }
-    }
-}
-
-void MainWindow::on_speed_changed(int index) {
-    double speeds[] = {1.0, 5.0, 10.0};
-    if (index >= 0 && index < 3) {
-        time_manager_.set_speed_multiplier(speeds[index]);
-        speed_label_->setText(QString("Скорость: x%1").arg(speeds[index]));
-        if (sys_log_) sys_log_->log("Скорость времени изменена на x" + std::to_string(speeds[index]));
     }
 }
 

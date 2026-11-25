@@ -477,6 +477,7 @@ C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Header/MainWindow.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Header/Plant.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Header/Schedule.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Header/Storage.h
+ mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Header/Weather.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Exception/Header/All_exception.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Exception/Header/Bed_not_found_exception.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Exception/Header/Equipment_failure_exception.h
@@ -491,6 +492,10 @@ C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Header/MainWindow.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Exception/Header/Sensor_read_exception.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Exception/Header/Storage_overflow_exception.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Human/Header/Operator.h
+ mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Weather/Header/Clear.h
+ mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Weather/Header/Rain.h
+ mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Weather/Header/Snow.h
+ mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Weather/Header/Storm.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Logger/Header/Action_logger.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Logger/Header/System_logger.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Header/File_manager.h
@@ -499,16 +504,16 @@ C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Header/MainWindow.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Template/Collection.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Header/MainWindow.h
  mdp:C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/GreenhouseSimulator_autogen/moc_predefs.h
+C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/Time_manager/Cpp/Time_manager.cpp
+C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Schedule.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Equipment/Cpp/Permanent_Equipment.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Bed.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Greenhouse.cpp
-C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/Time_manager/Cpp/Time_manager.cpp
-C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Schedule.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Equipment.cpp
-C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Plant.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Human.cpp
-C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Equipment_loader.cpp
+C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Plant.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Operation.cpp
+C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Equipment_loader.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Storage.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Equipment/Cpp/Single_use_Equipment.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Human/Cpp/Agronomist.cpp
@@ -532,3 +537,5 @@ C:/Users/Roman/Desktop/course POTHL/codeofcourse/main.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Manager/File_manager/Cpp/Bed_loader.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Logger/Cpp/Action_logger.cpp
 C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Logger/Cpp/System_logger.cpp
+C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Weather/Header/Storm.h
+C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Weather.cpp

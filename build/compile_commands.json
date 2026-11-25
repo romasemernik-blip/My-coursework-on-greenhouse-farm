@@ -208,5 +208,17 @@
   "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Weather.cpp\"",
   "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Weather.cpp",
   "output": "CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/BedsWidget.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Cpp/BedsWidget.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Cpp/BedsWidget.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/BedsWidget.cpp.obj"
+},
+{
+  "directory": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/build",
+  "command": "C:/Users/Roman/gcc/bin/g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GreenhouseSimulator.dir/includes_CXX.rsp -g -std=gnu++17 -pthread -o CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/BottomPanelWidget.cpp.obj -c \"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Cpp/BottomPanelWidget.cpp\"",
+  "file": "C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Cpp/BottomPanelWidget.cpp",
+  "output": "CMakeFiles/GreenhouseSimulator.dir/Class/UI/Cpp/BottomPanelWidget.cpp.obj"
 }
 ]

@@ -498,6 +498,11 @@ CMakeFiles/GreenhouseSimulator.dir/GreenhouseSimulator_autogen/mocs_compilation.
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Logger/Header/Action_logger.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Weather.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Weather/Header/Clear.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Weather/Header/Rain.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Weather/Header/Storm.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Weather/Header/Snow.h \
  C:/Qt/6.12.0/mingw_64/include/QtCore/qtmochelpers.h \
  C:/Qt/6.12.0/mingw_64/include/QtCore/qtmocconstants.h \
  C:/Qt/6.12.0/mingw_64/include/QtCore/q20algorithm.h

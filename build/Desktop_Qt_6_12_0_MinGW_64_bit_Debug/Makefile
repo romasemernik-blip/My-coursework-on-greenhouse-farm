@@ -346,6 +346,30 @@ Class/Base/Cpp/Storage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GreenhouseSimulator.dir\build.make CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Storage.cpp.s
 .PHONY : Class/Base/Cpp/Storage.cpp.s
 
+Class/Base/Cpp/Weather.obj: Class/Base/Cpp/Weather.cpp.obj
+.PHONY : Class/Base/Cpp/Weather.obj
+
+# target to build an object file
+Class/Base/Cpp/Weather.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GreenhouseSimulator.dir\build.make CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.obj
+.PHONY : Class/Base/Cpp/Weather.cpp.obj
+
+Class/Base/Cpp/Weather.i: Class/Base/Cpp/Weather.cpp.i
+.PHONY : Class/Base/Cpp/Weather.i
+
+# target to preprocess a source file
+Class/Base/Cpp/Weather.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GreenhouseSimulator.dir\build.make CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.i
+.PHONY : Class/Base/Cpp/Weather.cpp.i
+
+Class/Base/Cpp/Weather.s: Class/Base/Cpp/Weather.cpp.s
+.PHONY : Class/Base/Cpp/Weather.s
+
+# target to generate assembly for a file
+Class/Base/Cpp/Weather.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GreenhouseSimulator.dir\build.make CMakeFiles/GreenhouseSimulator.dir/Class/Base/Cpp/Weather.cpp.s
+.PHONY : Class/Base/Cpp/Weather.cpp.s
+
 Class/Inheritor/Equipment/Cpp/Permanent_Equipment.obj: Class/Inheritor/Equipment/Cpp/Permanent_Equipment.cpp.obj
 .PHONY : Class/Inheritor/Equipment/Cpp/Permanent_Equipment.obj
 
@@ -1005,6 +1029,9 @@ help:
 	@echo ... Class/Base/Cpp/Storage.obj
 	@echo ... Class/Base/Cpp/Storage.i
 	@echo ... Class/Base/Cpp/Storage.s
+	@echo ... Class/Base/Cpp/Weather.obj
+	@echo ... Class/Base/Cpp/Weather.i
+	@echo ... Class/Base/Cpp/Weather.s
 	@echo ... Class/Inheritor/Equipment/Cpp/Permanent_Equipment.obj
 	@echo ... Class/Inheritor/Equipment/Cpp/Permanent_Equipment.i
 	@echo ... Class/Inheritor/Equipment/Cpp/Permanent_Equipment.s

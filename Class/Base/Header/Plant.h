@@ -60,4 +60,5 @@ public:
     void set_stage(Growth_stage value);
     void set_stage_progress(double value);
     void set_stage_duration(double value);
+    void update(double dt, double bed_moisture, double bed_ph, bool is_light_on);
 };

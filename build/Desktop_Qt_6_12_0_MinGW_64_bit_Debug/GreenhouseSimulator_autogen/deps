@@ -682,6 +682,7 @@ GreenhouseSimulator_autogen/timestamp: \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Cpp/Plant.cpp \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Cpp/Schedule.cpp \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Cpp/Storage.cpp \
+	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Cpp/Weather.cpp \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Bed.h \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Equipment.h \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Greenhouse.h \
@@ -691,6 +692,7 @@ GreenhouseSimulator_autogen/timestamp: \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Plant.h \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Schedule.h \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Storage.h \
+	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Weather.h \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Exception/Header/All_exception.h \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Exception/Header/Bed_not_found_exception.h \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Exception/Header/Equipment_failure_exception.h \
@@ -716,6 +718,10 @@ GreenhouseSimulator_autogen/timestamp: \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Operation/Cpp/Auto_Operation.cpp \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Operation/Cpp/Collect.cpp \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Operation/Cpp/Planting_crop.cpp \
+	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Weather/Header/Clear.h \
+	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Weather/Header/Rain.h \
+	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Weather/Header/Snow.h \
+	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Weather/Header/Storm.h \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Logger/Cpp/Action_logger.cpp \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Logger/Cpp/System_logger.cpp \
 	C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Logger/Header/Action_logger.h \

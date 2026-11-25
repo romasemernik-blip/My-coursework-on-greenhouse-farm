@@ -294,6 +294,12 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Inheritor/Weather/Header/Storm.h",
+			"MU",
+			"JUOTB5UDB3/moc_Storm.cpp",
+			null
+		],
+		[
 			"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/UI/Header/MainWindow.h",
 			"MU",
 			"S2DYA7EHM4/moc_MainWindow.cpp",
@@ -409,6 +415,11 @@
 		],
 		[
 			"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Storage.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Roman/Desktop/course POTHL/codeofcourse/Class/Base/Cpp/Weather.cpp",
 			"MU",
 			null
 		],

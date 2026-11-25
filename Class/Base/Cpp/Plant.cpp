@@ -181,3 +181,24 @@ double Plant::get_hours_until_mature() const noexcept {
     }
     return remaining;
 }
+
+void Plant::update(double dt, double bed_moisture, double bed_ph, bool is_light_on) {
+    if (get_is_dead()) return;
+
+    // 1. Проверка условий (урон)
+    bool is_bad_conditions = (bed_moisture < 30.0) || (bed_ph < 5.5 || bed_ph > 7.5);
+    
+    if (is_bad_conditions) {
+        damage(5.0 * dt); // Наносим урон
+        if (get_is_dead()) return; // Если умерли от урона, дальше не растим
+    } else {
+        heal(1.0 * dt); // Лечим при хороших условиях
+    }
+
+    // 2. Рост (если есть свет, растет быстрее)
+    double growth_speed = is_light_on ? 1.5 : 1.0;
+    
+    // Вызываем рост
+    advance_stage(dt * growth_speed);
+    height_ += 0.01 * dt * growth_speed;
+}
