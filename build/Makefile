@@ -622,6 +622,54 @@ Class/Inheritor/Operation/Cpp/Planting_crop.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreenhouseSimulator.dir/build.make CMakeFiles/GreenhouseSimulator.dir/Class/Inheritor/Operation/Cpp/Planting_crop.cpp.s
 .PHONY : Class/Inheritor/Operation/Cpp/Planting_crop.cpp.s
 
+Class/Logger/Cpp/Action_logger.obj: Class/Logger/Cpp/Action_logger.cpp.obj
+.PHONY : Class/Logger/Cpp/Action_logger.obj
+
+# target to build an object file
+Class/Logger/Cpp/Action_logger.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreenhouseSimulator.dir/build.make CMakeFiles/GreenhouseSimulator.dir/Class/Logger/Cpp/Action_logger.cpp.obj
+.PHONY : Class/Logger/Cpp/Action_logger.cpp.obj
+
+Class/Logger/Cpp/Action_logger.i: Class/Logger/Cpp/Action_logger.cpp.i
+.PHONY : Class/Logger/Cpp/Action_logger.i
+
+# target to preprocess a source file
+Class/Logger/Cpp/Action_logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreenhouseSimulator.dir/build.make CMakeFiles/GreenhouseSimulator.dir/Class/Logger/Cpp/Action_logger.cpp.i
+.PHONY : Class/Logger/Cpp/Action_logger.cpp.i
+
+Class/Logger/Cpp/Action_logger.s: Class/Logger/Cpp/Action_logger.cpp.s
+.PHONY : Class/Logger/Cpp/Action_logger.s
+
+# target to generate assembly for a file
+Class/Logger/Cpp/Action_logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreenhouseSimulator.dir/build.make CMakeFiles/GreenhouseSimulator.dir/Class/Logger/Cpp/Action_logger.cpp.s
+.PHONY : Class/Logger/Cpp/Action_logger.cpp.s
+
+Class/Logger/Cpp/System_logger.obj: Class/Logger/Cpp/System_logger.cpp.obj
+.PHONY : Class/Logger/Cpp/System_logger.obj
+
+# target to build an object file
+Class/Logger/Cpp/System_logger.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreenhouseSimulator.dir/build.make CMakeFiles/GreenhouseSimulator.dir/Class/Logger/Cpp/System_logger.cpp.obj
+.PHONY : Class/Logger/Cpp/System_logger.cpp.obj
+
+Class/Logger/Cpp/System_logger.i: Class/Logger/Cpp/System_logger.cpp.i
+.PHONY : Class/Logger/Cpp/System_logger.i
+
+# target to preprocess a source file
+Class/Logger/Cpp/System_logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreenhouseSimulator.dir/build.make CMakeFiles/GreenhouseSimulator.dir/Class/Logger/Cpp/System_logger.cpp.i
+.PHONY : Class/Logger/Cpp/System_logger.cpp.i
+
+Class/Logger/Cpp/System_logger.s: Class/Logger/Cpp/System_logger.cpp.s
+.PHONY : Class/Logger/Cpp/System_logger.s
+
+# target to generate assembly for a file
+Class/Logger/Cpp/System_logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreenhouseSimulator.dir/build.make CMakeFiles/GreenhouseSimulator.dir/Class/Logger/Cpp/System_logger.cpp.s
+.PHONY : Class/Logger/Cpp/System_logger.cpp.s
+
 Class/Manager/File_manager/Cpp/Bed_loader.obj: Class/Manager/File_manager/Cpp/Bed_loader.cpp.obj
 .PHONY : Class/Manager/File_manager/Cpp/Bed_loader.obj
 
@@ -1002,6 +1050,12 @@ help:
 	@echo "... Class/Inheritor/Operation/Cpp/Planting_crop.obj"
 	@echo "... Class/Inheritor/Operation/Cpp/Planting_crop.i"
 	@echo "... Class/Inheritor/Operation/Cpp/Planting_crop.s"
+	@echo "... Class/Logger/Cpp/Action_logger.obj"
+	@echo "... Class/Logger/Cpp/Action_logger.i"
+	@echo "... Class/Logger/Cpp/Action_logger.s"
+	@echo "... Class/Logger/Cpp/System_logger.obj"
+	@echo "... Class/Logger/Cpp/System_logger.i"
+	@echo "... Class/Logger/Cpp/System_logger.s"
 	@echo "... Class/Manager/File_manager/Cpp/Bed_loader.obj"
 	@echo "... Class/Manager/File_manager/Cpp/Bed_loader.i"
 	@echo "... Class/Manager/File_manager/Cpp/Bed_loader.s"
