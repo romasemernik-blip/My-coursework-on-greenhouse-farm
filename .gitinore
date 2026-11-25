@@ -1,57 +1,103 @@
-# ===== Каталоги сборки =====
+# ==========================================
+# CMake и артефакты сборки
+# ==========================================
 build/
 build-*/
-*_autogen/
+cmake-build-*/
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
-*.make
 *.cmake.stamp
+compile_commands.json
 
-# ===== Артефакты компиляции =====
-*.o
-*.obj
+# ==========================================
+# Бинарные файлы и библиотеки
+# ==========================================
+*.exe
+*.dll
+*.so
+*.dylib
 *.a
 *.lib
-*.so
-*.dll
-*.dylib
-*.exe
+*.o
+*.obj
 *.pdb
 *.ilk
-*.idb
 *.exp
+*.idb
 
-# ===== Файлы Qt =====
-*.moc
+# ==========================================
+# Автогенерация Qt (moc, uic, rcc)
+# ==========================================
+*_autogen/
 moc_*.cpp
 moc_*.h
-qrc_*.cpp
+moc_predefs.h
 ui_*.h
-*.qmlc
-*.jsc
+qrc_*.cpp
+*.moc
 .qmake.stash
 *.pro.user
 *.pro.user.*
-*.qmlproject.user
-*.qmlproject.user.*
 
-# ===== Файлы IDE =====
+# ==========================================
+# Файлы логов, сохранений и текстовые данные
+# ==========================================
+*.log
+system_log.txt
+actions_log.txt
+save_data/
+storage_export.txt
+storage.txt
+
+# Игнорируем все текстовые файлы, которые генерирует или использует программа
+*.txt
+
+# Но если у вас есть важные текстовые файлы конфигурации (например, CMakeLists.txt), 
+# которые должны быть в репозитории, мы делаем для них исключение:
+!CMakeLists.txt
+
+# ==========================================
+# Файлы IDE и редакторов
+# ==========================================
+# Qt Creator
+*.autosave
+CMakeLists.txt.user
+*.qmlproject.user
+
+# Visual Studio / VS Code
+.vs/
 .vscode/
+*.suo
+*.user
+*.sln
+*.vcxproj*
+
+# CLion / IntelliJ
 .idea/
+*.iml
+
+# Vim / Emacs
 *.swp
+*.swo
 *~
 
-# ===== Файлы логов =====
-*.log
-application.log
-
-# ===== ОС =====
+# ==========================================
+# Системный мусор (Windows, macOS, Linux)
+# ==========================================
 Thumbs.db
+ehthumbs.db
 Desktop.ini
+$RECYCLE.BIN/
 .DS_Store
+.AppleDouble
+.LSOverride
 
-# ===== Прочее =====
+# ==========================================
+# Временные файлы и бэкапы
+# ==========================================
+*.bak
+*.tmp
 *.orig
 *.rej

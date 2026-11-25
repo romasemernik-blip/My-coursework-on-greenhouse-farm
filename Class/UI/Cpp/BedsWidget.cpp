@@ -16,6 +16,8 @@ BedsWidget::BedsWidget(QWidget *parent) : QWidget(parent) {
     main_layout->addWidget(grid_widget_);
 
     QHBoxLayout* action_layout = new QHBoxLayout();
+    
+    // Создаем все кнопки
     QPushButton* btn_add = new QPushButton("Добавить", this);
     QPushButton* btn_remove = new QPushButton("Удалить", this);
     QPushButton* btn_plant = new QPushButton("Посадить", this);
@@ -23,7 +25,9 @@ BedsWidget::BedsWidget(QWidget *parent) : QWidget(parent) {
     QPushButton* btn_water = new QPushButton("Полить", this);
     QPushButton* btn_fert = new QPushButton("Удобрить", this);
     QPushButton* btn_light = new QPushButton("Свет (грядка)", this);
+    QPushButton* btn_remove_dead = new QPushButton("Убрать мертвые", this);
 
+    // Подключаем сигналы
     connect(btn_add, &QPushButton::clicked, this, &BedsWidget::add_bed_clicked);
     connect(btn_remove, &QPushButton::clicked, this, &BedsWidget::remove_bed_clicked);
     connect(btn_plant, &QPushButton::clicked, this, &BedsWidget::plant_clicked);
@@ -31,7 +35,9 @@ BedsWidget::BedsWidget(QWidget *parent) : QWidget(parent) {
     connect(btn_water, &QPushButton::clicked, this, &BedsWidget::water_clicked);
     connect(btn_fert, &QPushButton::clicked, this, &BedsWidget::fertilize_clicked);
     connect(btn_light, &QPushButton::clicked, this, &BedsWidget::toggle_light_clicked);
+    connect(btn_remove_dead, &QPushButton::clicked, this, &BedsWidget::remove_dead_clicked);
 
+    // Добавляем в layout
     action_layout->addWidget(btn_add);
     action_layout->addWidget(btn_remove);
     action_layout->addWidget(btn_plant);
@@ -39,6 +45,8 @@ BedsWidget::BedsWidget(QWidget *parent) : QWidget(parent) {
     action_layout->addWidget(btn_water);
     action_layout->addWidget(btn_fert);
     action_layout->addWidget(btn_light);
+    action_layout->addWidget(btn_remove_dead); // Кнопка на месте
+    
     main_layout->addLayout(action_layout);
 }
 
@@ -79,6 +87,8 @@ void BedsWidget::set_bed(Bed* bed, bool is_light_on, double current_time_hours) 
             label->setStyleSheet(is_light_on ? "background-color: #8bc34a; border: 1px solid #558b2f;" : "background-color: #4caf50; border: 1px solid #388e3c;");
             
             double hours_left = p->get_hours_until_mature();
+            if (is_light_on) hours_left /= 1.5;
+
             int days = static_cast<int>(hours_left / 24);
             int hours = static_cast<int>(std::fmod(hours_left, 24.0));
             

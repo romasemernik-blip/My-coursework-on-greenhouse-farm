@@ -1,9 +1,9 @@
 CMakeFiles/GreenhouseSimulator.dir/GreenhouseSimulator_autogen/mocs_compilation.cpp.obj: \
  C:\Users\Roman\Desktop\course\ POTHL\codeofcourse\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\GreenhouseSimulator_autogen\mocs_compilation.cpp \
- C:\Users\Roman\Desktop\course\ POTHL\codeofcourse\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\GreenhouseSimulator_autogen\S2DYA7EHM4/moc_MainWindow.cpp \
- C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/UI/Header/MainWindow.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/QMainWindow \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qmainwindow.h \
+ C:\Users\Roman\Desktop\course\ POTHL\codeofcourse\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\GreenhouseSimulator_autogen\S2DYA7EHM4/moc_BedsWidget.cpp \
+ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/UI/Header/BedsWidget.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/QWidget \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qwidget.h \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
  C:/Qt/6.12.0/mingw_64/include/QtGui/qtguiglobal.h \
  C:/Qt/6.12.0/mingw_64/include/QtCore/qglobal.h \
@@ -157,7 +157,6 @@ CMakeFiles/GreenhouseSimulator.dir/GreenhouseSimulator_autogen/mocs_compilation.
  C:/Qt/6.12.0/mingw_64/include/QtGui/qtguiexports.h \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qwidget.h \
  C:/Qt/6.12.0/mingw_64/include/QtGui/qwindowdefs.h \
  C:/Qt/6.12.0/mingw_64/include/QtCore/qobjectdefs.h \
  C:/Qt/6.12.0/mingw_64/include/QtCore/qnamespace.h \
@@ -387,63 +386,22 @@ CMakeFiles/GreenhouseSimulator.dir/GreenhouseSimulator_autogen/mocs_compilation.
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qsizepolicy.h \
  C:/Qt/6.12.0/mingw_64/include/QtGui/qcursor.h \
  C:/Qt/6.12.0/mingw_64/include/QtGui/qbitmap.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qtabwidget.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/QTreeWidget \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qtreewidget.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qtreeview.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractitemview.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qframe.h \
- C:/Qt/6.12.0/mingw_64/include/QtCore/qabstractitemmodel.h \
- C:/Qt/6.12.0/mingw_64/include/QtCore/qitemselectionmodel.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qstyleoption.h \
- C:/Qt/6.12.0/mingw_64/include/QtCore/qlocale.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
- C:/Qt/6.12.0/mingw_64/include/QtGui/qvalidator.h \
- C:/Qt/6.12.0/mingw_64/include/QtCore/qregularexpression.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qslider.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractslider.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qstyle.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qtabbar.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qrubberband.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qtreewidgetitemiterator.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/QTextEdit \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qtextedit.h \
- C:/Qt/6.12.0/mingw_64/include/QtGui/qtextdocument.h \
- C:/Qt/6.12.0/mingw_64/include/QtCore/qurl.h \
- C:/Qt/6.12.0/mingw_64/include/QtGui/qtextoption.h \
- C:/Qt/6.12.0/mingw_64/include/QtGui/qtextcursor.h \
- C:/Qt/6.12.0/mingw_64/include/QtGui/qtextformat.h \
- C:/Qt/6.12.0/mingw_64/include/QtGui/qpen.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/QLabel \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlabel.h \
- C:/Qt/6.12.0/mingw_64/include/QtGui/qpicture.h \
- C:/Qt/6.12.0/mingw_64/include/QtCore/qiodevice.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/QPushButton \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qpushbutton.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractbutton.h \
- C:/Qt/6.12.0/mingw_64/include/QtCore/QTimer \
- C:/Qt/6.12.0/mingw_64/include/QtCore/qtimer.h \
- C:/Qt/6.12.0/mingw_64/include/QtCore/qbasictimer.h \
- C:/Qt/6.12.0/mingw_64/include/QtCore/qabstracteventdispatcher.h \
- C:/Qt/6.12.0/mingw_64/include/QtCore/qeventloop.h \
- C:/Qt/6.12.0/mingw_64/include/QtCore/qdeadlinetimer.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/QListWidget \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlistwidget.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlistview.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/QComboBox \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/qcombobox.h \
- C:/Qt/6.12.0/mingw_64/include/QtWidgets/QTabWidget \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/QGridLayout \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qgridlayout.h \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlayout.h \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlayoutitem.h \
  C:/Qt/6.12.0/mingw_64/include/QtWidgets/qboxlayout.h \
- C:/Qt/6.12.0/mingw_64/include/QtCore/QMap \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Manager/File_manager/Header/File_manager.h \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Manager/File_manager/Header/Plant_type_data.h \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Greenhouse.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/QLabel \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlabel.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qframe.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qpicture.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/qiodevice.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qtextdocument.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/qurl.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/QPushButton \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qpushbutton.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Bed.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Template/Collection.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Exception/Header/All_exception.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Exception/Header/Greenhouse_exception.h \
@@ -482,27 +440,62 @@ CMakeFiles/GreenhouseSimulator.dir/GreenhouseSimulator_autogen/mocs_compilation.
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Exception/Header/File_open_exception.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Exception/Header/File_format_exception.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Exception/Header/Invalid_argument_exception.h \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Bed.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Plant.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Growth_stage.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Equipment.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qtextcursor.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qtextformat.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qpen.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qtextoption.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/qtmochelpers.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/qtmocconstants.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/q20algorithm.h \
+ C:\Users\Roman\Desktop\course\ POTHL\codeofcourse\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\GreenhouseSimulator_autogen\S2DYA7EHM4/moc_BottomPanelWidget.cpp \
+ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/UI/Header/BottomPanelWidget.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/QTextEdit \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qtextedit.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/QComboBox \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qcombobox.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qstyleoption.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/qlocale.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+ C:/Qt/6.12.0/mingw_64/include/QtGui/qvalidator.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/qregularexpression.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qslider.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractslider.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qstyle.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qtabbar.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qtabwidget.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qrubberband.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+ C:\Users\Roman\Desktop\course\ POTHL\codeofcourse\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\GreenhouseSimulator_autogen\S2DYA7EHM4/moc_MainWindow.cpp \
+ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/UI/Header/MainWindow.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/QMainWindow \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qmainwindow.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/QTreeWidget \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qtreewidget.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qtreeview.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractitemview.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/qitemselectionmodel.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qtreewidgetitemiterator.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/QTabWidget \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/QListWidget \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlistwidget.h \
+ C:/Qt/6.12.0/mingw_64/include/QtWidgets/qlistview.h \
+ C:/Qt/6.12.0/mingw_64/include/QtCore/QMap \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Manager/File_manager/Header/File_manager.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Manager/File_manager/Header/Plant_type_data.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Greenhouse.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Human.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Storage.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Manager/Time_manager/Header/Time_manager.h \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Schedule.h \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Operation.h \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Human/Header/Operator.h \
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Weather.h \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Logger/Header/System_logger.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc \
  C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Logger/Header/Action_logger.h \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Base/Header/Weather.h \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Weather/Header/Clear.h \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Weather/Header/Rain.h \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Weather/Header/Storm.h \
- C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Weather/Header/Snow.h \
- C:/Qt/6.12.0/mingw_64/include/QtCore/qtmochelpers.h \
- C:/Qt/6.12.0/mingw_64/include/QtCore/qtmocconstants.h \
- C:/Qt/6.12.0/mingw_64/include/QtCore/q20algorithm.h
+ C:/Users/Roman/Desktop/COURSE~1/CODEOF~1/Class/Inheritor/Human/Header/Operator.h

@@ -1,7 +1,6 @@
 C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/GreenhouseSimulator_autogen/S2DYA7EHM4/moc_MainWindow.cpp: C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/UI/Header/MainWindow.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/GreenhouseSimulator_autogen/moc_predefs.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/QMap \
-  C:/Qt/6.12.0/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.12.0/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/q20bit.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/q20functional.h \
@@ -11,7 +10,6 @@ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_
   C:/Qt/6.12.0/mingw_64/include/QtCore/q20utility.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/q23type_traits.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/q23utility.h \
-  C:/Qt/6.12.0/mingw_64/include/QtCore/qabstracteventdispatcher.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qabstractitemmodel.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qalloc.h \
@@ -23,7 +21,6 @@ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_
   C:/Qt/6.12.0/mingw_64/include/QtCore/qatomic.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qatomic_cxx11.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qbasicatomic.h \
-  C:/Qt/6.12.0/mingw_64/include/QtCore/qbasictimer.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qbindingstorage.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qbitarray.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qbytearray.h \
@@ -44,10 +41,8 @@ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_
   C:/Qt/6.12.0/mingw_64/include/QtCore/qcontiguouscache.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qdatastream.h \
-  C:/Qt/6.12.0/mingw_64/include/QtCore/qdeadlinetimer.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qdebug.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qendian.h \
-  C:/Qt/6.12.0/mingw_64/include/QtCore/qeventloop.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qexceptionhandling.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qflags.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qfloat16.h \
@@ -124,7 +119,6 @@ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_
   C:/Qt/6.12.0/mingw_64/include/QtCore/qtenvironmentvariables.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qtextstream.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qtformat_impl.h \
-  C:/Qt/6.12.0/mingw_64/include/QtCore/qtimer.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qtnoop.h \
   C:/Qt/6.12.0/mingw_64/include/QtCore/qtpreprocessorsupport.h \
@@ -184,6 +178,7 @@ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/QTabWidget \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/QTextEdit \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/QTreeWidget \
+  C:/Qt/6.12.0/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
   C:/Qt/6.12.0/mingw_64/include/QtWidgets/qabstractitemview.h \
@@ -472,9 +467,7 @@ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Greenhouse.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Growth_stage.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Human.h \
-  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Operation.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Plant.h \
-  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Schedule.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Storage.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Base/Header/Weather.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Exception/Header/All_exception.h \
@@ -491,13 +484,11 @@ C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/build/Desktop_Qt_6_12_0_MinGW_
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Exception/Header/Sensor_read_exception.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Exception/Header/Storage_overflow_exception.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Human/Header/Operator.h \
-  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Weather/Header/Clear.h \
-  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Weather/Header/Rain.h \
-  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Weather/Header/Snow.h \
-  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Inheritor/Weather/Header/Storm.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Logger/Header/Action_logger.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Logger/Header/System_logger.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Manager/File_manager/Header/File_manager.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Manager/File_manager/Header/Plant_type_data.h \
   C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Manager/Time_manager/Header/Time_manager.h \
-  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Template/Collection.h
+  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/Template/Collection.h \
+  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/UI/Header/BedsWidget.h \
+  C:/Users/Roman/Desktop/course\ POTHL/codeofcourse/Class/UI/Header/BottomPanelWidget.h

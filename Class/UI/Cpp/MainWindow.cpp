@@ -102,11 +102,13 @@ void MainWindow::setup_ui() {
     // Вкладка 1: Грядки (Используем BedsWidget)
     beds_widget_ = new BedsWidget(this);
     connect(beds_widget_, &BedsWidget::add_bed_clicked, this, &MainWindow::on_add_bed_clicked);
+    connect(beds_widget_, &BedsWidget::remove_bed_clicked, this, &MainWindow::on_remove_bed_clicked);
     connect(beds_widget_, &BedsWidget::plant_clicked, this, &MainWindow::on_plant_clicked);
     connect(beds_widget_, &BedsWidget::collect_clicked, this, &MainWindow::on_collect_to_storage_clicked);
     connect(beds_widget_, &BedsWidget::water_clicked, this, &MainWindow::on_water_clicked);
     connect(beds_widget_, &BedsWidget::fertilize_clicked, this, &MainWindow::on_fertilize_clicked);
     connect(beds_widget_, &BedsWidget::toggle_light_clicked, this, &MainWindow::on_toggle_bed_light_clicked);
+    connect(beds_widget_, &BedsWidget::remove_dead_clicked, this, &MainWindow::on_remove_dead_clicked);
     tab_widget->addTab(beds_widget_, "Грядки");
 
     // Вкладка 2: Склад
@@ -187,21 +189,17 @@ void MainWindow::on_game_tick() {
 
 void MainWindow::apply_weather_effects(double dt) {
     try {
-        // Влажность
         double moist_change = current_weather_->get_moisture_effect() * dt;
         double new_moisture = current_selected_bed_->get_moisture() + moist_change;
         if (new_moisture > 100.0) new_moisture = 100.0;
         if (new_moisture < 0.0) new_moisture = 0.0;
         current_selected_bed_->set_moisture(new_moisture);
 
-        // pH
         double ph_change = current_weather_->get_ph_effect() * dt;
         double new_ph = current_selected_bed_->get_soil_ph() + ph_change;
         if (new_ph > 14.0) new_ph = 14.0;
         if (new_ph < 0.0) new_ph = 0.0;
         current_selected_bed_->set_soil_ph(new_ph);
-
-        // Урон теперь внутри Plant::update(), тут только погода.
     } catch (...) {}
 }
 
@@ -279,6 +277,38 @@ void MainWindow::on_add_bed_clicked() {
         handle_exception(e, "Добавление грядки (нет места)");
     } catch (const std::exception& e) {
         handle_exception(e, "Добавление грядки");
+    }
+}
+
+void MainWindow::on_remove_bed_clicked() {
+    if (!current_selected_bed_) {
+        QMessageBox::warning(this, "Внимание", "Выберите грядку для удаления!");
+        return;
+    }
+
+    try {
+        std::size_t index_to_remove = 0;
+        bool found = false;
+        
+        for (std::size_t i = 0; i < greenhouse_.get_bed_count(); ++i) {
+            if (greenhouse_.get_bed(i) == current_selected_bed_) {
+                index_to_remove = i;
+                found = true;
+                break;
+            }
+        }
+
+        if (found) {
+            greenhouse_.remove_bed(index_to_remove);
+            current_selected_bed_ = nullptr;
+            
+            log("Грядка удалена.");
+            if (act_log_) act_log_->log_action("Оператор", current_operator_name_.toStdString(), "Удалил грядку");
+            
+            refresh_all_views();
+        }
+    } catch (const std::exception& e) {
+        handle_exception(e, "Удаление грядки");
     }
 }
 
