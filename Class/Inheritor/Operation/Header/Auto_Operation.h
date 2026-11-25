@@ -13,7 +13,6 @@ private:
 public:
     Auto_operation() = default;
     
-    // Конструктор с действием
     Auto_operation(std::string_view name, 
                    double energy_cost, 
                    std::unique_ptr<Human> worker, 

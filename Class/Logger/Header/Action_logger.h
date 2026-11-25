@@ -6,7 +6,7 @@ class Action_logger {
 private:
     std::ofstream file_;
 public:
-    Action_logger(const std::string& filepath);
+    explicit Action_logger(const std::string& filepath); 
     ~Action_logger();
     void log_action(const std::string& role, const std::string& name, const std::string& action);
 };

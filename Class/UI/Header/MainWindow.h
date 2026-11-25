@@ -24,7 +24,7 @@ class MainWindow : public QMainWindow {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr); // Добавлен explicit
     ~MainWindow();
 
 protected:
@@ -33,12 +33,10 @@ protected:
 private slots:
     void on_game_tick();
     void on_speed_changed(int index);
-    
     void on_load_all_clicked();
     void on_save_all_clicked();
     void on_switch_operator_clicked();
     void on_export_storage_clicked();
-
     void on_add_bed_clicked();
     void on_remove_bed_clicked();
     void on_plant_clicked();
@@ -48,13 +46,10 @@ private slots:
     void on_toggle_bed_light_clicked();
     void on_remove_dead_clicked();
     void on_tree_item_clicked(QTreeWidgetItem *item, int column);
-
     void on_toggle_light_clicked();
     void on_repair_equipment_clicked();
     void on_add_equipment_clicked();
-
     void on_add_human_clicked();
-
     void on_add_schedule_operation_clicked();
 
 private:
@@ -73,26 +68,29 @@ private:
     bool assign_agronomist_dialog();
     bool select_operator_dialog(bool is_startup);
 
+    // Данные (инициализация прямо здесь)
     File_manager file_manager_;
     Greenhouse greenhouse_;
     Storage storage_;
     Time_manager time_manager_;
     Schedule schedule_;
     
-    Bed* current_selected_bed_;
+    Bed* current_selected_bed_ = nullptr;
     QString current_save_folder_;
     QString current_operator_name_;
-    bool is_bed_light_on_;
+    bool is_bed_light_on_ = false;
     
     std::unique_ptr<Weather> current_weather_;
-    double weather_timer_;
+    double weather_timer_ = 0.0;
     QMap<Plant*, double> harvest_times_;
     
     std::vector<std::unique_ptr<Human>> humans_;
 
+    // Логгеры
     std::unique_ptr<System_logger> sys_log_;
     std::unique_ptr<Action_logger> act_log_;
 
+    // UI Компоненты
     QTimer* game_timer_;
     QTreeWidget* tree_widget_;
     QTabWidget* tab_widget_;

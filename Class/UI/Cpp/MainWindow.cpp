@@ -26,10 +26,7 @@
 #include <QDateTime>
 #include <random>
 
-// ==========================================
-// КОНСТРУКТОР И ДЕСТРУКТОР
-// ==========================================
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), current_selected_bed_(nullptr) {
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     setWindowTitle("Greenhouse Simulator - Управление");
     resize(1300, 850);
 
@@ -38,8 +35,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), current_selected_
     sys_log_->log("=== ЗАПУСК ПРОГРАММЫ ===");
 
     current_weather_ = std::make_unique<Clear>();
-    weather_timer_ = 0.0;
-    is_bed_light_on_ = false;
 
     setup_ui();
 
@@ -58,7 +53,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), current_selected_
 
 MainWindow::~MainWindow() {
     if (sys_log_) sys_log_->log("=== ЗАВЕРШЕНИЕ ПРОГРАММЫ ===");
-    delete game_timer_;
+    // delete game_timer_; <-- УДАЛЕНО (Qt сам очистит память)
 }
 
 void MainWindow::closeEvent(QCloseEvent *event) {
@@ -66,18 +61,14 @@ void MainWindow::closeEvent(QCloseEvent *event) {
     event->accept();
 }
 
-// ==========================================
-// ИНТЕРФЕЙС
-// ==========================================
 void MainWindow::setup_ui() {
     QSplitter* main_splitter = new QSplitter(Qt::Horizontal, this);
 
-    // --- ЛЕВАЯ ПАНЕЛЬ ---
     QWidget* left_panel = new QWidget(this);
     QVBoxLayout* left_layout = new QVBoxLayout(left_panel);
 
-    QPushButton* btn_load_all = new QPushButton("Загрузить все данные", this);
-    QPushButton* btn_save_all = new QPushButton("Сохранить все данные", this);
+    auto* btn_load_all = new QPushButton("Загрузить все данные", this);
+    auto* btn_save_all = new QPushButton("Сохранить все данные", this);
     connect(btn_load_all, &QPushButton::clicked, this, &MainWindow::on_load_all_clicked);
     connect(btn_save_all, &QPushButton::clicked, this, &MainWindow::on_save_all_clicked);
     left_layout->addWidget(btn_load_all);
@@ -85,7 +76,7 @@ void MainWindow::setup_ui() {
 
     operator_label_ = new QLabel("Текущий оператор: Не выбран", this);
     operator_label_->setStyleSheet("font-weight: bold; color: #2c3e50;");
-    QPushButton* btn_switch_operator = new QPushButton("Сменить оператора", this);
+    auto* btn_switch_operator = new QPushButton("Сменить оператора", this);
     connect(btn_switch_operator, &QPushButton::clicked, this, &MainWindow::on_switch_operator_clicked);
     left_layout->addWidget(operator_label_);
     left_layout->addWidget(btn_switch_operator);
@@ -95,10 +86,8 @@ void MainWindow::setup_ui() {
     connect(tree_widget_, &QTreeWidget::itemClicked, this, &MainWindow::on_tree_item_clicked);
     left_layout->addWidget(tree_widget_);
 
-    // --- ПРАВАЯ ПАНЕЛЬ ---
     tab_widget_ = new QTabWidget(this);
 
-    // 1. Грядки
     beds_widget_ = new BedsWidget(this);
     connect(beds_widget_, &BedsWidget::add_bed_clicked, this, &MainWindow::on_add_bed_clicked);
     connect(beds_widget_, &BedsWidget::remove_bed_clicked, this, &MainWindow::on_remove_bed_clicked);
@@ -110,25 +99,23 @@ void MainWindow::setup_ui() {
     connect(beds_widget_, &BedsWidget::remove_dead_clicked, this, &MainWindow::on_remove_dead_clicked);
     tab_widget_->addTab(beds_widget_, "Грядки");
 
-    // 2. Склад
-    QWidget* storage_tab = new QWidget();
-    QVBoxLayout* storage_layout = new QVBoxLayout(storage_tab);
+    auto* storage_tab = new QWidget();
+    auto* storage_layout = new QVBoxLayout(storage_tab);
     storage_capacity_label_ = new QLabel("Склад: 0 / 0 кг", this);
     storage_list_widget_ = new QListWidget(this);
-    QPushButton* btn_export_storage = new QPushButton("Экспорт склада", this);
+    auto* btn_export_storage = new QPushButton("Экспорт склада", this);
     connect(btn_export_storage, &QPushButton::clicked, this, &MainWindow::on_export_storage_clicked);
     storage_layout->addWidget(storage_capacity_label_);
     storage_layout->addWidget(storage_list_widget_);
     storage_layout->addWidget(btn_export_storage);
     tab_widget_->addTab(storage_tab, "Склад");
 
-    // 3. Оборудование
-    QWidget* equip_tab = new QWidget();
-    QVBoxLayout* equip_layout = new QVBoxLayout(equip_tab);
+    auto* equip_tab = new QWidget();
+    auto* equip_layout = new QVBoxLayout(equip_tab);
     equipment_list_widget_ = new QListWidget(this);
-    QHBoxLayout* equip_btns = new QHBoxLayout();
-    QPushButton* btn_add_lamp = new QPushButton("Добавить лампу", this);
-    QPushButton* btn_repair_all = new QPushButton("Починить все", this);
+    auto* equip_btns = new QHBoxLayout();
+    auto* btn_add_lamp = new QPushButton("Добавить лампу", this);
+    auto* btn_repair_all = new QPushButton("Починить все", this);
     connect(btn_add_lamp, &QPushButton::clicked, this, &MainWindow::on_add_equipment_clicked);
     connect(btn_repair_all, &QPushButton::clicked, this, &MainWindow::on_repair_equipment_clicked);
     equip_btns->addWidget(btn_add_lamp);
@@ -137,27 +124,24 @@ void MainWindow::setup_ui() {
     equip_layout->addLayout(equip_btns);
     tab_widget_->addTab(equip_tab, "Оборудование");
 
-    // 4. Персонал
-    QWidget* humans_tab = new QWidget();
-    QVBoxLayout* humans_layout = new QVBoxLayout(humans_tab);
+    auto* humans_tab = new QWidget();
+    auto* humans_layout = new QVBoxLayout(humans_tab);
     humans_list_widget_ = new QListWidget(this);
-    QPushButton* btn_hire = new QPushButton("Нанять рабочего", this);
+    auto* btn_hire = new QPushButton("Нанять рабочего", this);
     connect(btn_hire, &QPushButton::clicked, this, &MainWindow::on_add_human_clicked);
     humans_layout->addWidget(humans_list_widget_);
     humans_layout->addWidget(btn_hire);
     tab_widget_->addTab(humans_tab, "Персонал");
 
-    // 5. Расписание
-    QWidget* schedule_tab = new QWidget();
-    QVBoxLayout* sched_layout = new QVBoxLayout(schedule_tab);
+    auto* schedule_tab = new QWidget();
+    auto* sched_layout = new QVBoxLayout(schedule_tab);
     schedule_list_widget_ = new QListWidget(this);
-    QPushButton* btn_add_task = new QPushButton("Создать автозадачу (Автополив)", this);
+    auto* btn_add_task = new QPushButton("Создать автозадачу (Автополив)", this);
     connect(btn_add_task, &QPushButton::clicked, this, &MainWindow::on_add_schedule_operation_clicked);
     sched_layout->addWidget(schedule_list_widget_);
     sched_layout->addWidget(btn_add_task);
     tab_widget_->addTab(schedule_tab, "Расписание");
 
-    // --- НИЖНЯЯ ПАНЕЛЬ ---
     bottom_panel_ = new BottomPanelWidget(this);
     connect(bottom_panel_, &BottomPanelWidget::speed_changed, this, &MainWindow::on_speed_changed);
 
@@ -169,16 +153,13 @@ void MainWindow::setup_ui() {
     setCentralWidget(main_splitter);
 }
 
-// ==========================================
-// ИГРОВОЙ ЦИКЛ
-// ==========================================
 void MainWindow::on_game_tick() {
     time_manager_.tick(1.0);
     
-    // Смена погоды каждые 24 часа
     weather_timer_ += time_manager_.get_speed_multiplier();
     if (weather_timer_ >= 24.0) {
         weather_timer_ = 0.0;
+        
         static std::random_device rd;
         static std::mt19937 gen(rd());
         static std::uniform_int_distribution<> distr(0, 3);
@@ -192,22 +173,18 @@ void MainWindow::on_game_tick() {
         log("Погода изменилась на: " + QString::fromStdString(current_weather_->get_name()));
     }
 
-    // Влияние на выбранную грядку
     if (current_selected_bed_) {
         apply_weather_effects(time_manager_.get_speed_multiplier());
     }
 
-    // Теплица обновляет рост растений
     greenhouse_.update(time_manager_.get_speed_multiplier(), is_bed_light_on_);
 
-    // Расписание
     double dt = time_manager_.get_speed_multiplier();
     schedule_.update(dt);
     schedule_.execute_all();
 
     check_harvest_time();
     
-    // Обновляем UI
     bottom_panel_->set_time_text(QString::fromStdString(time_manager_.get_formatted_time()));
     bottom_panel_->set_weather_text("Погода: " + QString::fromStdString(current_weather_->get_name()));
     
@@ -215,7 +192,6 @@ void MainWindow::on_game_tick() {
         beds_widget_->set_bed(current_selected_bed_, is_bed_light_on_, time_manager_.get_total_hours());
     }
     
-    // Обновляем вкладку расписания, чтобы видеть прогресс
     if (tab_widget_->currentIndex() == 4) {
         refresh_schedule_view();
     }
@@ -257,9 +233,6 @@ void MainWindow::on_speed_changed(int index) {
     }
 }
 
-// ==========================================
-// ДИАЛОГИ ВЫБОРА
-// ==========================================
 bool MainWindow::select_operator_dialog(bool is_startup) {
     QString title = is_startup ? "Регистрация на смену" : "Смена оператора";
     QString prompt = is_startup ? "Выберите оператора для начала работы:" : "Выберите нового оператора:";
@@ -297,9 +270,6 @@ bool MainWindow::assign_agronomist_dialog() {
     return true;
 }
 
-// ==========================================
-// ДЕЙСТВИЯ С ГРЯДКАМИ
-// ==========================================
 void MainWindow::on_add_bed_clicked() {
     try {
         auto new_bed = std::make_unique<Bed>(1, 1, 5.0, 2.0);
@@ -359,12 +329,16 @@ void MainWindow::on_plant_clicked() {
     int count = QInputDialog::getInt(this, "Посадка", "Сколько посадить?", 1, 1, 50, 1, &ok);
     if (!ok || count <= 0) return;
 
+    static std::random_device rd;
+    static std::mt19937 gen(rd());
+    static std::uniform_int_distribution<> distr(0, 100000);
+
     for (const auto& t : types) {
         if (t.get_type_name() == selected_type.toStdString()) {
             try {
                 for (int i = 0; i < count; ++i) {
                     auto plant = std::make_unique<Plant>(
-                        "id_" + std::to_string(rand()), t.get_type_name(), 1.0, 
+                        "id_" + std::to_string(distr(gen)), t.get_type_name(), 1.0, 
                         t.get_water_requirement(), t.get_optimal_temperature(), t.get_optimal_humidity()
                     );
                     Plant* raw = plant.get();
@@ -464,9 +438,6 @@ void MainWindow::on_remove_dead_clicked() {
     }
 }
 
-// ==========================================
-// ОБОРУДОВАНИЕ, ПЕРСОНАЛ, РАСПИСАНИЕ
-// ==========================================
 void MainWindow::on_add_equipment_clicked() {
     try {
         auto lamp = std::make_unique<Lighting>("Новая лампа", 50.0, 80.0, 550.0);
@@ -538,9 +509,6 @@ void MainWindow::on_toggle_light_clicked() {
     }
 }
 
-// ==========================================
-// ФАЙЛЫ
-// ==========================================
 void MainWindow::on_load_all_clicked() {
     QString dir = QFileDialog::getExistingDirectory(this, "Папка с сохранением");
     if (dir.isEmpty()) return;
@@ -580,9 +548,6 @@ void MainWindow::on_export_storage_clicked() {
     }
 }
 
-// ==========================================
-// ОБНОВЛЕНИЕ ИНТЕРФЕЙСА
-// ==========================================
 void MainWindow::refresh_all_views() {
     refresh_tree();
     refresh_storage_view();
@@ -596,15 +561,15 @@ void MainWindow::refresh_all_views() {
 
 void MainWindow::refresh_tree() {
     tree_widget_->clear();
-    QTreeWidgetItem* root = new QTreeWidgetItem(tree_widget_);
+    auto* root = new QTreeWidgetItem(tree_widget_);
     root->setText(0, "Теплица");
     for (std::size_t i = 0; i < greenhouse_.get_bed_count(); ++i) {
-        QTreeWidgetItem* bed_item = new QTreeWidgetItem(root);
+        auto* bed_item = new QTreeWidgetItem(root);
         bed_item->setText(0, QString("Грядка %1").arg(i + 1));
         bed_item->setData(0, Qt::UserRole, static_cast<int>(i));
         Bed* bed = greenhouse_.get_bed(i);
         for (std::size_t j = 0; j < bed->get_plant_count(); ++j) {
-            QTreeWidgetItem* p_item = new QTreeWidgetItem(bed_item);
+            auto* p_item = new QTreeWidgetItem(bed_item);
             p_item->setText(0, QString::fromStdString(bed->get_plant(j)->get_type()));
         }
     }
@@ -649,7 +614,7 @@ void MainWindow::refresh_schedule_view() {
     schedule_list_widget_->clear();
     for (std::size_t i = 0; i < schedule_.get_operation_count(); ++i) {
         Operation* op = schedule_.get_operation(i);
-        Auto_operation* auto_op = dynamic_cast<Auto_operation*>(op);
+        auto* auto_op = dynamic_cast<Auto_operation*>(op);
         
         QString text = QString("%1 (Приоритет: %2)").arg(QString::fromStdString(op->get_name())).arg(op->get_priority());
         if (auto_op) {
@@ -660,6 +625,7 @@ void MainWindow::refresh_schedule_view() {
 }
 
 void MainWindow::on_tree_item_clicked(QTreeWidgetItem *item, int column) {
+    Q_UNUSED(column);
     if (!item) return;
     QVariant data = item->data(0, Qt::UserRole);
     if (data.isValid()) {

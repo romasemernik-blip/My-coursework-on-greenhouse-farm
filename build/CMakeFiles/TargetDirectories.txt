@@ -1,5 +1,0 @@
-C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/CMakeFiles/GreenhouseSimulator.dir
-C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/CMakeFiles/edit_cache.dir
-C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/CMakeFiles/rebuild_cache.dir
-C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/CMakeFiles/GreenhouseSimulator_autogen_timestamp_deps.dir
-C:/Users/Roman/Desktop/course POTHL/codeofcourse/build/CMakeFiles/GreenhouseSimulator_autogen.dir

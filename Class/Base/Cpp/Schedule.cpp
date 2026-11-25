@@ -44,7 +44,7 @@ void Schedule::execute_all() {
         }
     }
 
-     std::sort(ready_ops.begin(), ready_ops.end(), [](const Operation* a, const Operation* b) {
+    std::sort(ready_ops.begin(), ready_ops.end(), [](const Operation* a, const Operation* b) {
         return a->get_priority() > b->get_priority();
     });
 

@@ -2,12 +2,14 @@
 #include <QDateTime>
 
 Action_logger::Action_logger(const std::string& filepath) {
-    // Открываем в режиме добавления (app)
     file_.open(filepath, std::ios::app);
 }
 
 Action_logger::~Action_logger() {
-    if (file_.is_open()) file_.close();
+    try {
+        if (file_.is_open()) file_.close();
+    } catch (...) {
+    }
 }
 
 void Action_logger::log_action(const std::string& role, const std::string& name, const std::string& action) {
