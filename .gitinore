@@ -1,0 +1,57 @@
+# ===== Каталоги сборки =====
+build/
+build-*/
+*_autogen/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.make
+*.cmake.stamp
+
+# ===== Артефакты компиляции =====
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+*.pdb
+*.ilk
+*.idb
+*.exp
+
+# ===== Файлы Qt =====
+*.moc
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+.qmake.stash
+*.pro.user
+*.pro.user.*
+*.qmlproject.user
+*.qmlproject.user.*
+
+# ===== Файлы IDE =====
+.vscode/
+.idea/
+*.swp
+*~
+
+# ===== Файлы логов =====
+*.log
+application.log
+
+# ===== ОС =====
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ===== Прочее =====
+*.orig
+*.rej
